@@ -1,3 +1,10 @@
 from django.contrib import admin
 
-# Register your models here.
+from article.models import Article
+
+
+@admin.register(Article)
+class ArticleAdmin(admin.ModelAdmin):
+    readonly_fields = ('id',)
+    list_display = ('id',)
+    list_filter = ('id',)

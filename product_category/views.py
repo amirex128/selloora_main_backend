@@ -1,58 +1,79 @@
-from rest_framework import status
-from rest_framework.decorators import api_view
+from datetime import datetime
+
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
-from .models import Category
-from .serializers import CategorySerializer
+from rest_framework.views import APIView
+
+from .models import ProductCategory
+from .permissions import ProductCategoryIndexPermission, ProductCategoryCreatePermission, ProductCategoryShowPermission, \
+    ProductCategoryUpdatePermission, ProductCategorySoftDeletePermission, ProductCategoryForceDeletePermission, \
+    ProductCategoryRestorePermission
+from .serializers import ProductCategoryCreateSerializer, ProductCategoryUpdateSerializer, ProductCategorySerializer
 
 
-@api_view(['GET', 'POST'])
-def user_categories(request):
-    if request.method == 'GET':
-        categories = Category.objects.filter(
-            user_id=request.user.id,
-            shop_id=request.GET.get('shop_id')
-        ).order_by('-created_at').paginate(
-            request.GET.get('per_page', 10)
-        )
-        serializer = CategorySerializer(categories, many=True)
-        return Response(serializer.data, status=status.HTTP_200_OK)
-    elif request.method == 'POST':
-        data = {
-            'name': request.data.get('name'),
-            'description': request.data.get('description'),
-            'shop_id': request.data.get('shop_id'),
-            'user_id': request.user.id
-        }
-        serializer = CategorySerializer(data=data)
+class ProductCategoryIndex(APIView):
+    permission_classes = [IsAuthenticated & ProductCategoryIndexPermission]
+
+    def get(self, request):
+        addresses = ProductCategorySerializer(ProductCategory.objects.filter(deleted_at__isnull=True), many=True)
+        return Response(addresses)
+
+
+class ProductCategoryCreate(APIView):
+    permission_classes = [IsAuthenticated & ProductCategoryCreatePermission]
+
+    def post(self, request):
+        serializer = ProductCategoryCreateSerializer(data=request.data,context={'request': request})
         if serializer.is_valid():
             serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        else:
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            return Response(serializer.data)
+        return Response(serializer.errors)
 
 
-@api_view(['GET', 'PUT', 'DELETE'])
-def category_detail(request, pk):
-    try:
-        category = Category.objects.get(pk=pk)
-    except Category.DoesNotExist:
-        return Response({'error': 'Category not found'}, status=status.HTTP_404_NOT_FOUND)
+class ProductCategoryShow(APIView):
+    permission_classes = [IsAuthenticated & ProductCategoryShowPermission]
 
-    if request.method == 'GET':
-        serializer = CategorySerializer(category)
-        return Response(serializer.data, status=status.HTTP_200_OK)
-    elif request.method == 'PUT':
-        data = {
-            'name': request.data.get('name'),
-            'description': request.data.get('description'),
-            'sort': request.data.get('sort')
-        }
-        serializer = CategorySerializer(category, data=data)
+    def get(self, request, pk):
+        address = ProductCategory.objects.get(pk=pk)
+        return Response(address)
+
+
+class ProductCategoryUpdate(APIView):
+    permission_classes = [IsAuthenticated & ProductCategoryUpdatePermission]
+
+    def put(self, request, pk):
+        address = ProductCategory.objects.get(pk=pk)
+        serializer = ProductCategoryUpdateSerializer(address, data=request.data)
         if serializer.is_valid():
             serializer.save()
-            return Response(serializer.data, status=status.HTTP_200_OK)
-        else:
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-    elif request.method == 'DELETE':
-        category.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+            return Response(serializer.data)
+        return Response(serializer.errors)
+
+
+class ProductCategorySoftDelete(APIView):
+    permission_classes = [IsAuthenticated & ProductCategorySoftDeletePermission]
+
+    def delete(self, request, pk):
+        address = ProductCategory.objects.get(pk=pk)
+        address.deleted_at = datetime.now()
+        address.save()
+        return Response('Deleted')
+
+
+class ProductCategoryForceDelete(APIView):
+    permission_classes = [IsAuthenticated & ProductCategoryForceDeletePermission]
+
+    def delete(self, request, pk):
+        address = ProductCategory.objects.get(pk=pk)
+        address.delete()
+        return Response('Deleted')
+
+
+class ProductCategoryRestore(APIView):
+    permission_classes = [IsAuthenticated & ProductCategoryRestorePermission]
+
+    def put(self, request, pk):
+        address = ProductCategory.objects.get(pk=pk)
+        address.deleted_at = None
+        address.save()
+        return Response('Restored')

@@ -2,7 +2,6 @@ from django.db import models
 from django.db.models.functions import datetime
 
 from address.models import Address
-from customer.models import Customer
 from discount.models import Discount
 from product.models import Product, Option
 from shop.models import Shop
@@ -45,14 +44,14 @@ class Order(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    user = models.ForeignKey(User, on_delete=models.SET_NULL,null=True,related_name='orders')
-    shop = models.ForeignKey(Shop, on_delete=models.SET_NULL,null=True,related_name='orders')
-    customer = models.ForeignKey(Customer, on_delete=models.SET_NULL,null=True,related_name='orders')
-    discount_id = models.ForeignKey(Discount, on_delete=models.SET_NULL, null=True,related_name='orders')
-    address = models.ForeignKey(Address, on_delete=models.SET_NULL, null=True,related_name='orders')
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name='orders')
+    shop = models.ForeignKey(Shop, on_delete=models.SET_NULL, null=True, related_name='orders')
+    discount = models.ForeignKey(Discount, on_delete=models.SET_NULL, null=True, related_name='orders')
+    address = models.ForeignKey(Address, on_delete=models.SET_NULL, null=True, related_name='orders')
 
     class Meta:
         db_table = "orders"
+
 
 class OrderItem(models.Model):
     id = models.BigAutoField(primary_key=True)
@@ -77,7 +76,6 @@ class OrderItem(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='order_items')
     product = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True, related_name='order_items')
     option = models.ForeignKey(Option, on_delete=models.SET_NULL, null=True, related_name='order_items')
-
 
     class Meta:
         db_table = "order_items"

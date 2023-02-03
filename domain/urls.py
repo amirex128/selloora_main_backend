@@ -1,6 +1,15 @@
 from django.urls import path
-# from address.views import get_address_pagination
+
+from .views import DomainIndex, DomainCreate, DomainShow, DomainSoftDelete, \
+    DomainForceDelete, DomainRestore
+from rest_framework.urlpatterns import format_suffix_patterns
 
 urlpatterns = [
-    # path('/', view.get_address_pagination, name='get_address_pagination'),
+    path('', DomainIndex.as_view()),
+    path('create', DomainCreate.as_view()),
+    path('show/<int:pk>', DomainShow.as_view()),
+    path('delete/<int:pk>', DomainSoftDelete.as_view()),
+    path('delete/force/<int:pk>', DomainForceDelete.as_view()),
+    path('delete/restore/<int:pk>', DomainRestore.as_view()),
 ]
+urlpatterns = format_suffix_patterns(urlpatterns)

@@ -18,6 +18,7 @@ class Discount(models.Model):
     model = models.CharField(max_length=255, choices=[('shop', 'shop'), ('product', 'product')])
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    deleted_at = models.DateTimeField(blank=True, null=True)
 
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='discounts')
     products = models.ManyToManyField(Product, related_name='discounts')

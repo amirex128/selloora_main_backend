@@ -1,6 +1,15 @@
 from django.urls import path
-# from address.views import get_address_pagination
+
+from .views import MediaIndex, MediaCreate, MediaShow, MediaSoftDelete, \
+    MediaForceDelete, MediaRestore
+from rest_framework.urlpatterns import format_suffix_patterns
 
 urlpatterns = [
-    # path('/', view.get_address_pagination, name='get_address_pagination'),
+    path('', MediaIndex.as_view()),
+    path('create', MediaCreate.as_view()),
+    path('show/<int:pk>', MediaShow.as_view()),
+    path('delete/<int:pk>', MediaSoftDelete.as_view()),
+    path('delete/force/<int:pk>', MediaForceDelete.as_view()),
+    path('delete/restore/<int:pk>', MediaRestore.as_view()),
 ]
+urlpatterns = format_suffix_patterns(urlpatterns)

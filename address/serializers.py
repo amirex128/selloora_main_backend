@@ -3,13 +3,16 @@ from datetime import datetime
 from rest_framework import serializers
 
 from address.models import Address
-from city.serializers import CitySerializer
-from province.serializers import ProvinceSerializer
+from city.models import City
+from province.models import Province
 from user.models import User
-from user.serializers import UserSerializer
-
 
 class AddressSerializer(serializers.ModelSerializer):
+    class Meta:
+            model = Address
+            fields = '__all__'
+
+class AddressCreateSerializer(serializers.Serializer):
     title = serializers.CharField(max_length=255, required=True)
     address = serializers.CharField(max_length=255, required=True)
     postal_code = serializers.CharField(max_length=255, required=True)
@@ -17,15 +20,30 @@ class AddressSerializer(serializers.ModelSerializer):
     full_name = serializers.CharField(max_length=255, required=True)
     lat = serializers.CharField(max_length=255, required=False)
     long = serializers.CharField(max_length=255, required=False)
-    created_at = serializers.DateTimeField(read_only=True)
+
     province_id = serializers.IntegerField(required=True)
     city_id = serializers.IntegerField(required=True)
 
     def create(self, validated_data):
-        user_id = validated_data.pop('user_id')
+        user_id = self.context['request'].user.id
+        province_id = validated_data.pop('province_id')
+        city_id = validated_data.pop('city_id')
         validated_data['created_at'] = datetime.now()
-        address = Address.objects.create(user=User(id=user_id), **validated_data)
-        return address
+        validated_data['updated_at'] = datetime.now()
+        return Address.objects.create(user_id=user_id, province_id=province_id, city_id=city_id, **validated_data)
+
+
+class AddressUpdateSerializer(serializers.Serializer):
+    title = serializers.CharField(max_length=255, required=False)
+    address = serializers.CharField(max_length=255, required=False)
+    postal_code = serializers.CharField(max_length=255, required=False)
+    mobile = serializers.CharField(max_length=255, required=False)
+    full_name = serializers.CharField(max_length=255, required=False)
+    lat = serializers.CharField(max_length=255, required=False)
+    long = serializers.CharField(max_length=255, required=False)
+
+    province_id = serializers.IntegerField(required=False)
+    city_id = serializers.IntegerField(required=False)
 
     def update(self, instance, validated_data):
         instance.title = validated_data.get('title', instance.title)
@@ -37,10 +55,6 @@ class AddressSerializer(serializers.ModelSerializer):
         instance.long = validated_data.get('long', instance.long)
         instance.province_id = validated_data.get('province_id', instance.province_id)
         instance.city_id = validated_data.get('city_id', instance.city_id)
-        instance.user_id = validated_data.get('user_id', instance.user_id)
+        instance.updated_at = datetime.now()
         instance.save()
         return instance
-
-    class Meta:
-        model = Address
-        fields = '__all__'

@@ -1,9 +1,9 @@
 from rest_framework import serializers
 
-from province.models import Province
+from .models import Province
 
 
 class ProvinceSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Province
-        fields = '__all__'
+            model = Province
+            fields = '__all__'

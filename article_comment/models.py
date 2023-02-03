@@ -13,7 +13,6 @@ class ArticleComment(models.Model):
                               choices=[('pending', 'pending'), ('accepted', 'accepted'), ('rejected', 'rejected')],
                               default='pending')
     created_at = models.DateTimeField(auto_now_add=True, editable=False)
-    updated_at = models.DateTimeField(auto_now=True, editable=False)
 
     article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='article_comments')
     shop = models.ForeignKey(Shop, on_delete=models.CASCADE,related_name='article_comments')

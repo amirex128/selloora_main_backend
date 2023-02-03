@@ -11,6 +11,7 @@ class ProductCategory(models.Model):
     description = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    deleted_at = models.DateTimeField(blank=True, null=True)
 
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='product_categories')
     shop = models.ForeignKey(Shop, on_delete=models.CASCADE, related_name='product_categories')

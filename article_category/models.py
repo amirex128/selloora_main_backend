@@ -11,9 +11,10 @@ class ArticleCategory(models.Model):
     description = models.CharField(max_length=255, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    deleted_at = models.DateTimeField(blank=True, null=True)
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE,related_name='article_categories')
-    shop = models.ForeignKey(Shop, on_delete=models.CASCADE,related_name='article_categories')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='article_categories')
+    shop = models.ForeignKey(Shop, on_delete=models.CASCADE, related_name='article_categories')
 
     class Meta:
         db_table = "article_categories"

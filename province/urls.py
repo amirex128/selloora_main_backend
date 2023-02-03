@@ -1,6 +1,9 @@
 from django.urls import path
-# from address.views import get_address_pagination
+
+from .views import ProvinceIndex
+from rest_framework.urlpatterns import format_suffix_patterns
 
 urlpatterns = [
-    # path('/', view.get_address_pagination, name='get_address_pagination'),
+    path('', ProvinceIndex.as_view()),
 ]
+urlpatterns = format_suffix_patterns(urlpatterns)
