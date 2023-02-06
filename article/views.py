@@ -1,79 +1,124 @@
-from datetime import datetime
 
+from django.utils import timezone
+from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
-
+from utils import messages, exceptions
+from utils import debuger
 from .models import Article
 from .permissions import ArticleIndexPermission, ArticleCreatePermission, ArticleShowPermission, \
     ArticleUpdatePermission, ArticleSoftDeletePermission, ArticleForceDeletePermission, \
     ArticleRestorePermission
-from .serializers import ArticleCreateSerializer, ArticleUpdateSerializer, ArticleSerializer
+from .serializers import ArticleCreateSerializer, ArticleUpdateSerializer, ArticleSerializer, ArticleIndexSerializer
 
 
-class ArticleIndex(APIView):
+class ArticleIndex(APIView, PageNumberPagination):
     permission_classes = [IsAuthenticated & ArticleIndexPermission]
 
     def get(self, request):
-        addresses = ArticleSerializer(Article.objects.filter(deleted_at__isnull=True), many=True)
-        return Response(addresses)
+        try:
+            model = Article.objects.filter(deleted_at__isnull=True,user_id=request.user.id)
+            self.page_size = request.GET.get('page_size', 10)
+            result = self.paginate_queryset(model, request)
+            return self.get_paginated_response(ArticleIndexSerializer(result, many=True).data)
+        except Exception as e:
+            return exceptions.default_exception(self, e)
 
 
 class ArticleCreate(APIView):
     permission_classes = [IsAuthenticated & ArticleCreatePermission]
 
     def post(self, request):
-        serializer = ArticleCreateSerializer(data=request.data,context={'request': request})
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
-        return Response(serializer.errors)
+        try:
+            serializer = ArticleCreateSerializer(data=request.data, context={'request': request})
+            if serializer.is_valid():
+                result = serializer.save()
+                return Response({
+                    'message': messages.CREATED,
+                    'data': ArticleIndexSerializer(result).data
+                })
+            else:
+                return Response(serializer.errors)
+        except Exception as e:
+            return exceptions.default_exception(self, e)
+
 
 
 class ArticleShow(APIView):
     permission_classes = [IsAuthenticated & ArticleShowPermission]
 
     def get(self, request, pk):
-        address = Article.objects.get(pk=pk)
-        return Response(address)
+        try:
+            model = Article.objects.select_related('province', 'city').get(pk=pk)
+            return Response(ArticleSerializer(model).data)
+        except Exception as e:
+            return exceptions.default_exception(self, e)
+
 
 
 class ArticleUpdate(APIView):
     permission_classes = [IsAuthenticated & ArticleUpdatePermission]
 
     def put(self, request, pk):
-        address = Article.objects.get(pk=pk)
-        serializer = ArticleUpdateSerializer(address, data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
-        return Response(serializer.errors)
+        try:
+            model = Article.objects.get(pk=pk)
+            serializer = ArticleUpdateSerializer(model, data=request.data)
+            if serializer.is_valid():
+                result = serializer.save()
+                return Response({
+                    'message': messages.UPDATED,
+                    'data': ArticleIndexSerializer(result).data
+                })
+            else:
+                return Response(serializer.errors)
+        except Exception as e:
+            return exceptions.default_exception(self, e)
+
 
 
 class ArticleSoftDelete(APIView):
     permission_classes = [IsAuthenticated & ArticleSoftDeletePermission]
 
     def delete(self, request, pk):
-        address = Article.objects.get(pk=pk)
-        address.deleted_at = datetime.now()
-        address.save()
-        return Response('Deleted')
+        try:
+            model = Article.objects.get(pk=pk)
+            model.deleted_at = timezone.now()
+            model.save()
+            return Response({
+                'message': messages.DELETED
+            })
+        except Exception as e:
+            return exceptions.default_exception(self, e)
+
 
 
 class ArticleForceDelete(APIView):
     permission_classes = [IsAuthenticated & ArticleForceDeletePermission]
 
     def delete(self, request, pk):
-        address = Article.objects.get(pk=pk)
-        address.delete()
-        return Response('Deleted')
+        try:
+            address = Article.objects.get(pk=pk)
+            address.delete()
+            return Response({
+                'message': messages.FORCE_DELETED
+            })
+        except Exception as e:
+            return exceptions.default_exception(self, e)
+
 
 
 class ArticleRestore(APIView):
     permission_classes = [IsAuthenticated & ArticleRestorePermission]
 
     def put(self, request, pk):
-        address = Article.objects.get(pk=pk)
-        address.deleted_at = None
-        address.save()
-        return Response('Restored')
+        try:
+            address = Article.objects.get(pk=pk)
+            address.deleted_at = None
+            address.save()
+            return Response({
+                'message': messages.RESTORE_DELETED
+            })
+        except Exception as e:
+            return exceptions.default_exception(self, e)
+

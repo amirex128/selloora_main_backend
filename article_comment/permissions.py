@@ -14,7 +14,7 @@ class ArticleCommentCreatePermission(BasePermission):
 
 class ArticleCommentShowPermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = ArticleComment.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -24,7 +24,7 @@ class ArticleCommentShowPermission(BasePermission):
 
 class ArticleCommentForceDeletePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = ArticleComment.objects.filter(id=pk).first()
         if model is None:
             return False

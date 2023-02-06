@@ -14,7 +14,7 @@ class DiscountCreatePermission(BasePermission):
 
 class DiscountShowPermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Discount.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -25,7 +25,7 @@ class DiscountShowPermission(BasePermission):
 
 class DiscountUpdatePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Discount.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -36,7 +36,7 @@ class DiscountUpdatePermission(BasePermission):
 
 class DiscountSoftDeletePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Discount.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -47,7 +47,7 @@ class DiscountSoftDeletePermission(BasePermission):
 
 class DiscountForceDeletePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Discount.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -58,7 +58,7 @@ class DiscountForceDeletePermission(BasePermission):
 
 class DiscountRestorePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Discount.objects.filter(id=pk).first()
         if model is None:
             return False

@@ -1,79 +1,124 @@
-from datetime import datetime
 
+from django.utils import timezone
+from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
-
+from utils import messages, exceptions
+from utils import debuger
 from .models import ArticleCategory
 from .permissions import ArticleCategoryIndexPermission, ArticleCategoryCreatePermission, ArticleCategoryShowPermission, \
     ArticleCategoryUpdatePermission, ArticleCategorySoftDeletePermission, ArticleCategoryForceDeletePermission, \
     ArticleCategoryRestorePermission
-from .serializers import ArticleCategoryCreateSerializer, ArticleCategoryUpdateSerializer, ArticleCategorySerializer
+from .serializers import ArticleCategoryCreateSerializer, ArticleCategoryUpdateSerializer, ArticleCategorySerializer, ArticleCategoryIndexSerializer
 
 
-class ArticleCategoryIndex(APIView):
+class ArticleCategoryIndex(APIView, PageNumberPagination):
     permission_classes = [IsAuthenticated & ArticleCategoryIndexPermission]
 
     def get(self, request):
-        addresses = ArticleCategorySerializer(ArticleCategory.objects.filter(deleted_at__isnull=True), many=True)
-        return Response(addresses)
+        try:
+            model = ArticleCategory.objects.filter(deleted_at__isnull=True,user_id=request.user.id)
+            self.page_size = request.GET.get('page_size', 10)
+            result = self.paginate_queryset(model, request)
+            return self.get_paginated_response(ArticleCategoryIndexSerializer(result, many=True).data)
+        except Exception as e:
+            return exceptions.default_exception(self, e)
 
 
 class ArticleCategoryCreate(APIView):
     permission_classes = [IsAuthenticated & ArticleCategoryCreatePermission]
 
     def post(self, request):
-        serializer = ArticleCategoryCreateSerializer(data=request.data,context={'request': request})
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
-        return Response(serializer.errors)
+        try:
+            serializer = ArticleCategoryCreateSerializer(data=request.data, context={'request': request})
+            if serializer.is_valid():
+                result = serializer.save()
+                return Response({
+                    'message': messages.CREATED,
+                    'data': ArticleCategoryIndexSerializer(result).data
+                })
+            else:
+                return Response(serializer.errors)
+        except Exception as e:
+            return exceptions.default_exception(self, e)
+
 
 
 class ArticleCategoryShow(APIView):
     permission_classes = [IsAuthenticated & ArticleCategoryShowPermission]
 
     def get(self, request, pk):
-        address = ArticleCategory.objects.get(pk=pk)
-        return Response(address)
+        try:
+            model = ArticleCategory.objects.select_related('province', 'city').get(pk=pk)
+            return Response(ArticleCategorySerializer(model).data)
+        except Exception as e:
+            return exceptions.default_exception(self, e)
+
 
 
 class ArticleCategoryUpdate(APIView):
     permission_classes = [IsAuthenticated & ArticleCategoryUpdatePermission]
 
     def put(self, request, pk):
-        address = ArticleCategory.objects.get(pk=pk)
-        serializer = ArticleCategoryUpdateSerializer(address, data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
-        return Response(serializer.errors)
+        try:
+            model = ArticleCategory.objects.get(pk=pk)
+            serializer = ArticleCategoryUpdateSerializer(model, data=request.data)
+            if serializer.is_valid():
+                result = serializer.save()
+                return Response({
+                    'message': messages.UPDATED,
+                    'data': ArticleCategoryIndexSerializer(result).data
+                })
+            else:
+                return Response(serializer.errors)
+        except Exception as e:
+            return exceptions.default_exception(self, e)
+
 
 
 class ArticleCategorySoftDelete(APIView):
     permission_classes = [IsAuthenticated & ArticleCategorySoftDeletePermission]
 
     def delete(self, request, pk):
-        address = ArticleCategory.objects.get(pk=pk)
-        address.deleted_at = datetime.now()
-        address.save()
-        return Response('Deleted')
+        try:
+            model = ArticleCategory.objects.get(pk=pk)
+            model.deleted_at = timezone.now()
+            model.save()
+            return Response({
+                'message': messages.DELETED
+            })
+        except Exception as e:
+            return exceptions.default_exception(self, e)
+
 
 
 class ArticleCategoryForceDelete(APIView):
     permission_classes = [IsAuthenticated & ArticleCategoryForceDeletePermission]
 
     def delete(self, request, pk):
-        address = ArticleCategory.objects.get(pk=pk)
-        address.delete()
-        return Response('Deleted')
+        try:
+            address = ArticleCategory.objects.get(pk=pk)
+            address.delete()
+            return Response({
+                'message': messages.FORCE_DELETED
+            })
+        except Exception as e:
+            return exceptions.default_exception(self, e)
+
 
 
 class ArticleCategoryRestore(APIView):
     permission_classes = [IsAuthenticated & ArticleCategoryRestorePermission]
 
     def put(self, request, pk):
-        address = ArticleCategory.objects.get(pk=pk)
-        address.deleted_at = None
-        address.save()
-        return Response('Restored')
+        try:
+            address = ArticleCategory.objects.get(pk=pk)
+            address.deleted_at = None
+            address.save()
+            return Response({
+                'message': messages.RESTORE_DELETED
+            })
+        except Exception as e:
+            return exceptions.default_exception(self, e)
+

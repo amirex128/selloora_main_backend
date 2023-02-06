@@ -18,7 +18,8 @@ class Article(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='articles')
     media = models.ForeignKey(Media, null=True, on_delete=models.SET_NULL, related_name='articles')
     shop = models.ForeignKey(Shop, on_delete=models.CASCADE, related_name='articles')
-    article_category = models.ManyToManyField(ArticleCategory, related_name='articles')
+    article_categories = models.ManyToManyField(ArticleCategory, related_name='articles')
 
     class Meta:
+        ordering = ['-created_at']
         db_table = "articles"

@@ -1,16 +1,25 @@
-from datetime import datetime
-
+from django.utils import timezone
 from rest_framework import serializers
 
 from address.models import Address
-from city.models import City
-from province.models import Province
-from user.models import User
+from city.serializers import CitySerializer
+from province.serializers import ProvinceSerializer
+
+
+class AddressIndexSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Address
+        fields = '__all__'
+
 
 class AddressSerializer(serializers.ModelSerializer):
+    province = ProvinceSerializer(read_only=True)
+    city = CitySerializer(read_only=True)
+
     class Meta:
-            model = Address
-            fields = '__all__'
+        model = Address
+        fields = '__all__'
+
 
 class AddressCreateSerializer(serializers.Serializer):
     title = serializers.CharField(max_length=255, required=True)
@@ -28,8 +37,8 @@ class AddressCreateSerializer(serializers.Serializer):
         user_id = self.context['request'].user.id
         province_id = validated_data.pop('province_id')
         city_id = validated_data.pop('city_id')
-        validated_data['created_at'] = datetime.now()
-        validated_data['updated_at'] = datetime.now()
+        validated_data['created_at'] = timezone.now()
+        validated_data['updated_at'] = timezone.now()
         return Address.objects.create(user_id=user_id, province_id=province_id, city_id=city_id, **validated_data)
 
 
@@ -55,6 +64,6 @@ class AddressUpdateSerializer(serializers.Serializer):
         instance.long = validated_data.get('long', instance.long)
         instance.province_id = validated_data.get('province_id', instance.province_id)
         instance.city_id = validated_data.get('city_id', instance.city_id)
-        instance.updated_at = datetime.now()
+        instance.updated_at = timezone.now()
         instance.save()
         return instance

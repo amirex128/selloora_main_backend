@@ -6,6 +6,10 @@ from shop.models import Shop
 from user.models import User
 from .models import ArticleCategory
 
+class ArticleCategoryIndexSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ArticleCategory
+        fields = '__all__'
 
 class ArticleCategorySerializer(serializers.ModelSerializer):
     class Meta:

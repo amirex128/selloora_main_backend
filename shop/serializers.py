@@ -3,6 +3,10 @@ from rest_framework import serializers
 from media.models import Media
 from user.models import User
 from .models import Shop, Theme
+class ShopIndexSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Shop
+        fields = '__all__'
 
 
 class ShopSerializer(serializers.ModelSerializer):

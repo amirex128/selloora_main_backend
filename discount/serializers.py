@@ -3,6 +3,10 @@ from rest_framework import serializers
 from user.models import User
 from .models import Discount
 
+class DiscountIndexSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Discount
+        fields = '__all__'
 
 class DiscountSerializer(serializers.ModelSerializer):
     class Meta:

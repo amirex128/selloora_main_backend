@@ -14,6 +14,7 @@ class Theme(models.Model):
     media = models.ForeignKey(Media, blank=True, null=True, on_delete=models.SET_NULL, related_name='themes')
 
     class Meta:
+        ordering = ['-created_at']
         db_table = "themes"
 
 class Shop(models.Model):
@@ -38,4 +39,5 @@ class Shop(models.Model):
     theme = models.ForeignKey(Theme, default=1, on_delete=models.SET_NULL,null=True, related_name='shops')
 
     class Meta:
+        ordering = ['-created_at']
         db_table = "shops"

@@ -5,6 +5,10 @@ from shop.models import Shop
 from user.models import User
 from .models import Ticket
 
+class TicketIndexSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Ticket
+        fields = '__all__'
 
 class TicketSerializer(serializers.ModelSerializer):
     class Meta:

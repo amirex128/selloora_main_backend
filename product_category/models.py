@@ -17,4 +17,5 @@ class ProductCategory(models.Model):
     shop = models.ForeignKey(Shop, on_delete=models.CASCADE, related_name='product_categories')
 
     class Meta:
+        ordering = ['-created_at']
         db_table = "product_categories"

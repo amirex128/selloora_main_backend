@@ -26,3 +26,4 @@ class Discount(models.Model):
 
     class Meta:
         db_table = "discounts"
+        ordering = ['-created_at']

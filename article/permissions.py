@@ -14,7 +14,7 @@ class ArticleCreatePermission(BasePermission):
 
 class ArticleShowPermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Article.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -25,7 +25,7 @@ class ArticleShowPermission(BasePermission):
 
 class ArticleUpdatePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Article.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -36,7 +36,7 @@ class ArticleUpdatePermission(BasePermission):
 
 class ArticleSoftDeletePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Article.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -47,7 +47,7 @@ class ArticleSoftDeletePermission(BasePermission):
 
 class ArticleForceDeletePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Article.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -58,7 +58,7 @@ class ArticleForceDeletePermission(BasePermission):
 
 class ArticleRestorePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Article.objects.filter(id=pk).first()
         if model is None:
             return False

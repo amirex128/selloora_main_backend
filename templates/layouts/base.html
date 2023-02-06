@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        elasticApm.init({
+            serviceName: "my-frontend-service",
+            pageLoadTraceId: "{{ apm.trace_id }}",
+            pageLoadSpanId: "{{ apm.span_id }}",
+            pageLoadSampled: {{ apm.is_sampled_js }}
+        })
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -14,7 +14,7 @@ class ShopCreatePermission(BasePermission):
 
 class ShopShowPermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Shop.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -25,7 +25,7 @@ class ShopShowPermission(BasePermission):
 
 class ShopUpdatePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Shop.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -36,7 +36,7 @@ class ShopUpdatePermission(BasePermission):
 
 class ShopSoftDeletePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Shop.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -47,7 +47,7 @@ class ShopSoftDeletePermission(BasePermission):
 
 class ShopForceDeletePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Shop.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -58,7 +58,7 @@ class ShopForceDeletePermission(BasePermission):
 
 class ShopRestorePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Shop.objects.filter(id=pk).first()
         if model is None:
             return False

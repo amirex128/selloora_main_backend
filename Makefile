@@ -4,7 +4,7 @@ mig:
 makemig:
 	python manage.py makemigrations
 
-user:
+suser:
 	python manage.py createsuperuser
 
 runserver:

@@ -7,6 +7,10 @@ from shop.models import Shop
 from user.models import User
 from .models import ArticleComment
 
+class ArticleCommentIndexSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ArticleComment
+        fields = '__all__'
 
 class ArticleCommentSerializer(serializers.ModelSerializer):
     class Meta:

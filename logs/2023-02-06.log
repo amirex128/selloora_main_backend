@@ -1,0 +1,699 @@
+<------------------------------------------------>
+
+Total time: 0.039319753646850586 
+
+Total queries: 8 
+
+Query: SELECT COUNT(*) AS `__count` FROM `addresses` WHERE `addresses`.`deleted_at` IS NULL *---* Time : 0.001
+Query: SELECT `addresses`.`id`, `addresses`.`title`, `addresses`.`address`, `addresses`.`postal_code`, `addresses`.`mobile`, `addresses`.`full_name`, `addresses`.`lat`, `addresses`.`long`, `addresses`.`created_at`, `addresses`.`updated_at`, `addresses`.`deleted_at`, `addresses`.`user_id`, `addresses`.`province_id`, `addresses`.`city_id` FROM `addresses` WHERE `addresses`.`deleted_at` IS NULL ORDER BY `addresses`.`created_at` DESC LIMIT 3 OFFSET 27 *---* Time : 0.002
+Query: SELECT `provinces`.`id`, `provinces`.`persian_name`, `provinces`.`english_name`, `provinces`.`COD` FROM `provinces` WHERE `provinces`.`id` = 1 LIMIT 21 *---* Time : 0.002
+Query: SELECT `cities`.`id`, `cities`.`persian_name`, `cities`.`english_name`, `cities`.`code`, `cities`.`lat`, `cities`.`lng`, `cities`.`province_id` FROM `cities` WHERE `cities`.`id` = 1 LIMIT 21 *---* Time : 0.001
+Query: SELECT `provinces`.`id`, `provinces`.`persian_name`, `provinces`.`english_name`, `provinces`.`COD` FROM `provinces` WHERE `provinces`.`id` = 1 LIMIT 21 *---* Time : 0.001
+Query: SELECT `cities`.`id`, `cities`.`persian_name`, `cities`.`english_name`, `cities`.`code`, `cities`.`lat`, `cities`.`lng`, `cities`.`province_id` FROM `cities` WHERE `cities`.`id` = 1 LIMIT 21 *---* Time : 0.001
+Query: SELECT `provinces`.`id`, `provinces`.`persian_name`, `provinces`.`english_name`, `provinces`.`COD` FROM `provinces` WHERE `provinces`.`id` = 1 LIMIT 21 *---* Time : 0.001
+Query: SELECT `cities`.`id`, `cities`.`persian_name`, `cities`.`english_name`, `cities`.`code`, `cities`.`lat`, `cities`.`lng`, `cities`.`province_id` FROM `cities` WHERE `cities`.`id` = 1 LIMIT 21 *---* Time : 0.002
+<------------------------------------------------>
+
+Total time: 0.09081792831420898 
+
+Total queries: 22 
+
+Query: SELECT COUNT(*) AS `__count` FROM `addresses` WHERE `addresses`.`deleted_at` IS NULL *---* Time : 0.001
+Query: SELECT `addresses`.`id`, `addresses`.`title`, `addresses`.`address`, `addresses`.`postal_code`, `addresses`.`mobile`, `addresses`.`full_name`, `addresses`.`lat`, `addresses`.`long`, `addresses`.`created_at`, `addresses`.`updated_at`, `addresses`.`deleted_at`, `addresses`.`user_id`, `addresses`.`province_id`, `addresses`.`city_id` FROM `addresses` WHERE `addresses`.`deleted_at` IS NULL ORDER BY `addresses`.`created_at` DESC LIMIT 10 *---* Time : 0.001
+Query: SELECT `provinces`.`id`, `provinces`.`persian_name`, `provinces`.`english_name`, `provinces`.`COD` FROM `provinces` WHERE `provinces`.`id` = 1 LIMIT 21 *---* Time : 0.001
+Query: SELECT `cities`.`id`, `cities`.`persian_name`, `cities`.`english_name`, `cities`.`code`, `cities`.`lat`, `cities`.`lng`, `cities`.`province_id` FROM `cities` WHERE `cities`.`id` = 1 LIMIT 21 *---* Time : 0.001
+Query: SELECT `provinces`.`id`, `provinces`.`persian_name`, `provinces`.`english_name`, `provinces`.`COD` FROM `provinces` WHERE `provinces`.`id` = 1 LIMIT 21 *---* Time : 0.001
+Query: SELECT `cities`.`id`, `cities`.`persian_name`, `cities`.`english_name`, `cities`.`code`, `cities`.`lat`, `cities`.`lng`, `cities`.`province_id` FROM `cities` WHERE `cities`.`id` = 1 LIMIT 21 *---* Time : 0.002
+Query: SELECT `provinces`.`id`, `provinces`.`persian_name`, `provinces`.`english_name`, `provinces`.`COD` FROM `provinces` WHERE `provinces`.`id` = 1 LIMIT 21 *---* Time : 0.002
+Query: SELECT `cities`.`id`, `cities`.`persian_name`, `cities`.`english_name`, `cities`.`code`, `cities`.`lat`, `cities`.`lng`, `cities`.`province_id` FROM `cities` WHERE `cities`.`id` = 1 LIMIT 21 *---* Time : 0.001
+Query: SELECT `provinces`.`id`, `provinces`.`persian_name`, `provinces`.`english_name`, `provinces`.`COD` FROM `provinces` WHERE `provinces`.`id` = 1 LIMIT 21 *---* Time : 0.001
+Query: SELECT `cities`.`id`, `cities`.`persian_name`, `cities`.`english_name`, `cities`.`code`, `cities`.`lat`, `cities`.`lng`, `cities`.`province_id` FROM `cities` WHERE `cities`.`id` = 1 LIMIT 21 *---* Time : 0.001
+Query: SELECT `provinces`.`id`, `provinces`.`persian_name`, `provinces`.`english_name`, `provinces`.`COD` FROM `provinces` WHERE `provinces`.`id` = 1 LIMIT 21 *---* Time : 0.001
+Query: SELECT `cities`.`id`, `cities`.`persian_name`, `cities`.`english_name`, `cities`.`code`, `cities`.`lat`, `cities`.`lng`, `cities`.`province_id` FROM `cities` WHERE `cities`.`id` = 1 LIMIT 21 *---* Time : 0.002
+Query: SELECT `provinces`.`id`, `provinces`.`persian_name`, `provinces`.`english_name`, `provinces`.`COD` FROM `provinces` WHERE `provinces`.`id` = 1 LIMIT 21 *---* Time : 0.001
+Query: SELECT `cities`.`id`, `cities`.`persian_name`, `cities`.`english_name`, `cities`.`code`, `cities`.`lat`, `cities`.`lng`, `cities`.`province_id` FROM `cities` WHERE `cities`.`id` = 1 LIMIT 21 *---* Time : 0.002
+Query: SELECT `provinces`.`id`, `provinces`.`persian_name`, `provinces`.`english_name`, `provinces`.`COD` FROM `provinces` WHERE `provinces`.`id` = 1 LIMIT 21 *---* Time : 0.001
+Query: SELECT `cities`.`id`, `cities`.`persian_name`, `cities`.`english_name`, `cities`.`code`, `cities`.`lat`, `cities`.`lng`, `cities`.`province_id` FROM `cities` WHERE `cities`.`id` = 1 LIMIT 21 *---* Time : 0.001
+Query: SELECT `provinces`.`id`, `provinces`.`persian_name`, `provinces`.`english_name`, `provinces`.`COD` FROM `provinces` WHERE `provinces`.`id` = 1 LIMIT 21 *---* Time : 0.001
+Query: SELECT `cities`.`id`, `cities`.`persian_name`, `cities`.`english_name`, `cities`.`code`, `cities`.`lat`, `cities`.`lng`, `cities`.`province_id` FROM `cities` WHERE `cities`.`id` = 1 LIMIT 21 *---* Time : 0.002
+Query: SELECT `provinces`.`id`, `provinces`.`persian_name`, `provinces`.`english_name`, `provinces`.`COD` FROM `provinces` WHERE `provinces`.`id` = 1 LIMIT 21 *---* Time : 0.001
+Query: SELECT `cities`.`id`, `cities`.`persian_name`, `cities`.`english_name`, `cities`.`code`, `cities`.`lat`, `cities`.`lng`, `cities`.`province_id` FROM `cities` WHERE `cities`.`id` = 1 LIMIT 21 *---* Time : 0.001
+Query: SELECT `provinces`.`id`, `provinces`.`persian_name`, `provinces`.`english_name`, `provinces`.`COD` FROM `provinces` WHERE `provinces`.`id` = 1 LIMIT 21 *---* Time : 0.001
+Query: SELECT `cities`.`id`, `cities`.`persian_name`, `cities`.`english_name`, `cities`.`code`, `cities`.`lat`, `cities`.`lng`, `cities`.`province_id` FROM `cities` WHERE `cities`.`id` = 1 LIMIT 21 *---* Time : 0.001
+<------------------------------------------------>
+
+Total time: 0.018450498580932617 
+
+Total queries: 2 
+
+Query: SELECT COUNT(*) AS `__count` FROM `addresses` WHERE `addresses`.`deleted_at` IS NULL *---* Time : 0.001
+Query: SELECT `addresses`.`id`, `addresses`.`title`, `addresses`.`address`, `addresses`.`postal_code`, `addresses`.`mobile`, `addresses`.`full_name`, `addresses`.`lat`, `addresses`.`long`, `addresses`.`created_at`, `addresses`.`updated_at`, `addresses`.`deleted_at`, `addresses`.`user_id`, `addresses`.`province_id`, `addresses`.`city_id`, `provinces`.`id`, `provinces`.`persian_name`, `provinces`.`english_name`, `provinces`.`COD`, `cities`.`id`, `cities`.`persian_name`, `cities`.`english_name`, `cities`.`code`, `cities`.`lat`, `cities`.`lng`, `cities`.`province_id` FROM `addresses` LEFT OUTER JOIN `provinces` ON (`addresses`.`province_id` = `provinces`.`id`) LEFT OUTER JOIN `cities` ON (`addresses`.`city_id` = `cities`.`id`) WHERE `addresses`.`deleted_at` IS NULL ORDER BY `addresses`.`created_at` DESC LIMIT 10 *---* Time : 0.002
+<------------------------------------------------>
+
+Total time: 0.01846766471862793 
+
+Total queries: 2 
+
+Query: SELECT COUNT(*) AS `__count` FROM `addresses` WHERE `addresses`.`deleted_at` IS NULL *---* Time : 0.002
+Query: SELECT `addresses`.`id`, `addresses`.`title`, `addresses`.`address`, `addresses`.`postal_code`, `addresses`.`mobile`, `addresses`.`full_name`, `addresses`.`lat`, `addresses`.`long`, `addresses`.`created_at`, `addresses`.`updated_at`, `addresses`.`deleted_at`, `addresses`.`user_id`, `addresses`.`province_id`, `addresses`.`city_id`, `provinces`.`id`, `provinces`.`persian_name`, `provinces`.`english_name`, `provinces`.`COD`, `cities`.`id`, `cities`.`persian_name`, `cities`.`english_name`, `cities`.`code`, `cities`.`lat`, `cities`.`lng`, `cities`.`province_id` FROM `addresses` LEFT OUTER JOIN `provinces` ON (`addresses`.`province_id` = `provinces`.`id`) LEFT OUTER JOIN `cities` ON (`addresses`.`city_id` = `cities`.`id`) WHERE `addresses`.`deleted_at` IS NULL ORDER BY `addresses`.`created_at` DESC LIMIT 10 *---* Time : 0.002
+<------------------------------------------------>
+
+Total time: 0.009841680526733398 
+
+Total queries: 1 
+
+Query: SELECT `addresses`.`id`, `addresses`.`title`, `addresses`.`address`, `addresses`.`postal_code`, `addresses`.`mobile`, `addresses`.`full_name`, `addresses`.`lat`, `addresses`.`long`, `addresses`.`created_at`, `addresses`.`updated_at`, `addresses`.`deleted_at`, `addresses`.`user_id`, `addresses`.`province_id`, `addresses`.`city_id`, `provinces`.`id`, `provinces`.`persian_name`, `provinces`.`english_name`, `provinces`.`COD`, `cities`.`id`, `cities`.`persian_name`, `cities`.`english_name`, `cities`.`code`, `cities`.`lat`, `cities`.`lng`, `cities`.`province_id` FROM `addresses` LEFT OUTER JOIN `provinces` ON (`addresses`.`province_id` = `provinces`.`id`) LEFT OUTER JOIN `cities` ON (`addresses`.`city_id` = `cities`.`id`) WHERE `addresses`.`id` = 8 LIMIT 21 *---* Time : 0.002
+error in ArticleCreate
+Traceback (most recent call last):
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/elasticapm/instrumentation/packages/dbapi2.py", line 211, in execute
+    return self._trace_sql(self.__wrapped__.execute, sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/elasticapm/instrumentation/packages/dbapi2.py", line 249, in _trace_sql
+    result = method(sql, params)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+          ^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 320, in _query
+    self._do_get_result(db)
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 145, in _do_get_result
+    self._result = result = self._get_result()
+                            ^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 352, in _get_result
+    return self._get_db().store_result()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+MySQLdb.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`selloora_main`.`articles`, CONSTRAINT `articles_media_id_f999befa_fk_media_id` FOREIGN KEY (`media_id`) REFERENCES `media` (`id`))')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/amirex128/projects/selloora/selloora_main_backend/article/views.py", line 42, in post
+    result = serializer.save()
+             ^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/article/serializers.py", line 36, in create
+    article = Article.objects.create(user_id=user_id, shop_id=shop_id, media_id=media_id, **validated_data)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 671, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 812, in save
+    self.save_base(
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 863, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 1006, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 1047, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1791, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1660, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/debug_toolbar/panels/sql/tracking.py", line 230, in execute
+    return self._record(self.cursor.execute, sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/debug_toolbar/panels/sql/tracking.py", line 154, in _record
+    return method(sql, params)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/elasticapm/instrumentation/packages/dbapi2.py", line 211, in execute
+    return self._trace_sql(self.__wrapped__.execute, sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/elasticapm/instrumentation/packages/dbapi2.py", line 249, in _trace_sql
+    result = method(sql, params)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+          ^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 320, in _query
+    self._do_get_result(db)
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 145, in _do_get_result
+    self._result = result = self._get_result()
+                            ^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 352, in _get_result
+    return self._get_db().store_result()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`selloora_main`.`articles`, CONSTRAINT `articles_media_id_f999befa_fk_media_id` FOREIGN KEY (`media_id`) REFERENCES `media` (`id`))')
+error in ArticleCreate
+Traceback (most recent call last):
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/elasticapm/instrumentation/packages/dbapi2.py", line 211, in execute
+    return self._trace_sql(self.__wrapped__.execute, sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/elasticapm/instrumentation/packages/dbapi2.py", line 249, in _trace_sql
+    result = method(sql, params)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+          ^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 320, in _query
+    self._do_get_result(db)
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 145, in _do_get_result
+    self._result = result = self._get_result()
+                            ^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 352, in _get_result
+    return self._get_db().store_result()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+MySQLdb.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`selloora_main`.`articles`, CONSTRAINT `articles_media_id_f999befa_fk_media_id` FOREIGN KEY (`media_id`) REFERENCES `media` (`id`))')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/amirex128/projects/selloora/selloora_main_backend/article/views.py", line 42, in post
+    result = serializer.save()
+             ^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/article/serializers.py", line 36, in create
+    article = Article.objects.create(user_id=user_id, shop_id=shop_id, media_id=media_id, **validated_data)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 671, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 812, in save
+    self.save_base(
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 863, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 1006, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 1047, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1791, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1660, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/debug_toolbar/panels/sql/tracking.py", line 230, in execute
+    return self._record(self.cursor.execute, sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/debug_toolbar/panels/sql/tracking.py", line 154, in _record
+    return method(sql, params)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/elasticapm/instrumentation/packages/dbapi2.py", line 211, in execute
+    return self._trace_sql(self.__wrapped__.execute, sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/elasticapm/instrumentation/packages/dbapi2.py", line 249, in _trace_sql
+    result = method(sql, params)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+          ^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 320, in _query
+    self._do_get_result(db)
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 145, in _do_get_result
+    self._result = result = self._get_result()
+                            ^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 352, in _get_result
+    return self._get_db().store_result()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`selloora_main`.`articles`, CONSTRAINT `articles_media_id_f999befa_fk_media_id` FOREIGN KEY (`media_id`) REFERENCES `media` (`id`))')
+------ error in <class 'article.views.ArticleCreate'> ------
+Traceback (most recent call last):
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/elasticapm/instrumentation/packages/dbapi2.py", line 211, in execute
+    return self._trace_sql(self.__wrapped__.execute, sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/elasticapm/instrumentation/packages/dbapi2.py", line 249, in _trace_sql
+    result = method(sql, params)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+          ^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 320, in _query
+    self._do_get_result(db)
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 145, in _do_get_result
+    self._result = result = self._get_result()
+                            ^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 352, in _get_result
+    return self._get_db().store_result()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+MySQLdb.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`selloora_main`.`articles`, CONSTRAINT `articles_media_id_f999befa_fk_media_id` FOREIGN KEY (`media_id`) REFERENCES `media` (`id`))')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/amirex128/projects/selloora/selloora_main_backend/article/views.py", line 36, in post
+    result = serializer.save()
+             ^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/article/serializers.py", line 36, in create
+    article = Article.objects.create(user_id=user_id, shop_id=shop_id, media_id=media_id, **validated_data)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 671, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 812, in save
+    self.save_base(
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 863, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 1006, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 1047, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1791, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1660, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/debug_toolbar/panels/sql/tracking.py", line 230, in execute
+    return self._record(self.cursor.execute, sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/debug_toolbar/panels/sql/tracking.py", line 154, in _record
+    return method(sql, params)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/elasticapm/instrumentation/packages/dbapi2.py", line 211, in execute
+    return self._trace_sql(self.__wrapped__.execute, sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/elasticapm/instrumentation/packages/dbapi2.py", line 249, in _trace_sql
+    result = method(sql, params)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+          ^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 320, in _query
+    self._do_get_result(db)
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 145, in _do_get_result
+    self._result = result = self._get_result()
+                            ^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 352, in _get_result
+    return self._get_db().store_result()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`selloora_main`.`articles`, CONSTRAINT `articles_media_id_f999befa_fk_media_id` FOREIGN KEY (`media_id`) REFERENCES `media` (`id`))')
+------ error in <class 'media.views.MediaCreate'> ------
+Traceback (most recent call last):
+  File "/home/amirex128/projects/selloora/selloora_main_backend/media/views.py", line 33, in post
+    serializer = MediaCreateSerializer(data=request.data, context={'request': request})
+                                            ^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/rest_framework/request.py", line 216, in data
+    self._load_data_and_files()
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/rest_framework/request.py", line 279, in _load_data_and_files
+    self._data, self._files = self._parse()
+                              ^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/rest_framework/request.py", line 351, in _parse
+    raise exceptions.UnsupportedMediaType(media_type)
+rest_framework.exceptions.UnsupportedMediaType: Unsupported media type "multipart/form-data; boundary=X-INSOMNIA-BOUNDARY" in request.
+------ error in <class 'media.views.MediaCreate'> ------
+Traceback (most recent call last):
+  File "/home/amirex128/projects/selloora/selloora_main_backend/media/views.py", line 33, in post
+    serializer = MediaCreateSerializer(data=request.data, context={'request': request})
+                                            ^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/rest_framework/request.py", line 216, in data
+    self._load_data_and_files()
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/rest_framework/request.py", line 279, in _load_data_and_files
+    self._data, self._files = self._parse()
+                              ^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/rest_framework/request.py", line 351, in _parse
+    raise exceptions.UnsupportedMediaType(media_type)
+rest_framework.exceptions.UnsupportedMediaType: Unsupported media type "multipart/form-data; boundary=X-INSOMNIA-BOUNDARY" in request.
+------ error in <class 'media.views.MediaCreate'> ------
+Traceback (most recent call last):
+  File "/home/amirex128/projects/selloora/selloora_main_backend/media/views.py", line 35, in post
+    serializer = MediaCreateSerializer(data=request.data, context={'request': request})
+                                            ^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/rest_framework/request.py", line 216, in data
+    self._load_data_and_files()
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/rest_framework/request.py", line 279, in _load_data_and_files
+    self._data, self._files = self._parse()
+                              ^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/rest_framework/request.py", line 354, in _parse
+    parsed = parser.parse(stream, media_type, self.parser_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/rest_framework/parsers.py", line 140, in parse
+    raise ParseError(self.errors['no_filename'])
+rest_framework.exceptions.ParseError: Missing filename. Request should include a Content-Disposition header with a filename parameter.
+------ error in <class 'media.views.MediaCreate'> ------
+Traceback (most recent call last):
+  File "/home/amirex128/projects/selloora/selloora_main_backend/media/views.py", line 35, in post
+    serializer = MediaCreateSerializer(data=request.data, context={'request': request})
+                                            ^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/rest_framework/request.py", line 216, in data
+    self._load_data_and_files()
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/rest_framework/request.py", line 279, in _load_data_and_files
+    self._data, self._files = self._parse()
+                              ^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/rest_framework/request.py", line 354, in _parse
+    parsed = parser.parse(stream, media_type, self.parser_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/rest_framework/parsers.py", line 140, in parse
+    raise ParseError(self.errors['no_filename'])
+rest_framework.exceptions.ParseError: Missing filename. Request should include a Content-Disposition header with a filename parameter.
+------ error in <class 'media.views.MediaCreate'> ------
+Traceback (most recent call last):
+  File "/home/amirex128/projects/selloora/selloora_main_backend/media/views.py", line 35, in post
+    serializer = MediaCreateSerializer(data=request.data, context={'request': request})
+                                            ^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/rest_framework/request.py", line 216, in data
+    self._load_data_and_files()
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/rest_framework/request.py", line 279, in _load_data_and_files
+    self._data, self._files = self._parse()
+                              ^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/rest_framework/request.py", line 354, in _parse
+    parsed = parser.parse(stream, media_type, self.parser_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/rest_framework/parsers.py", line 140, in parse
+    raise ParseError(self.errors['no_filename'])
+rest_framework.exceptions.ParseError: Missing filename. Request should include a Content-Disposition header with a filename parameter.
+------ error in <class 'media.views.MediaCreate'> ------
+Traceback (most recent call last):
+  File "/home/amirex128/projects/selloora/selloora_main_backend/media/views.py", line 37, in post
+    result = serializer.save()
+             ^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/media/serializers.py", line 22, in create
+    return Media.objects.create(user_id=user_id, **validated_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 669, in create
+    obj = self.model(**kwargs)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 565, in __init__
+    raise TypeError(
+TypeError: Media() got unexpected keyword arguments: 'file'
+------ error in <class 'media.views.MediaCreate'> ------
+Traceback (most recent call last):
+  File "/home/amirex128/projects/selloora/selloora_main_backend/media/views.py", line 37, in post
+    result = serializer.save()
+             ^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/media/serializers.py", line 22, in create
+    return Media.objects.create(user_id=user_id, **validated_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 669, in create
+    obj = self.model(**kwargs)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 565, in __init__
+    raise TypeError(
+TypeError: Media() got unexpected keyword arguments: 'file'
+------ error in <class 'media.views.MediaCreate'> ------
+Traceback (most recent call last):
+  File "/home/amirex128/projects/selloora/selloora_main_backend/media/views.py", line 37, in post
+    result = serializer.save()
+             ^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/rest_framework/serializers.py", line 177, in create
+    raise NotImplementedError('`create()` must be implemented.')
+NotImplementedError: `create()` must be implemented.
+------ error in <class 'media.views.MediaCreate'> ------
+Traceback (most recent call last):
+  File "/home/amirex128/projects/selloora/selloora_main_backend/media/views.py", line 37, in post
+    file = serializer.file
+           ^^^^^^^^^^^^^^^
+AttributeError: 'MediaCreateSerializer' object has no attribute 'file'
+------ error in <class 'media.views.MediaCreate'> ------
+Traceback (most recent call last):
+  File "/home/amirex128/projects/selloora/selloora_main_backend/media/views.py", line 37, in post
+    file = serializer.data.file
+           ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ReturnDict' object has no attribute 'file'
+------ error in <class 'media.views.MediaCreate'> ------
+Traceback (most recent call last):
+  File "/home/amirex128/projects/selloora/selloora_main_backend/media/views.py", line 38, in post
+    path = file.name
+           ^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'name'
+------ error in <class 'media.views.MediaCreate'> ------
+Traceback (most recent call last):
+  File "/home/amirex128/projects/selloora/selloora_main_backend/media/views.py", line 38, in post
+    full_path = file.path
+                ^^^^^^^^^
+AttributeError: 'InMemoryUploadedFile' object has no attribute 'path'
+------ error in <class 'media.views.MediaCreate'> ------
+Traceback (most recent call last):
+  File "/home/amirex128/projects/selloora/selloora_main_backend/media/views.py", line 42, in post
+    result = Media.objects.create(path=path,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 669, in create
+    obj = self.model(**kwargs)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 541, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 237, in __set__
+    raise ValueError(
+ValueError: Cannot assign "1": "Media.user" must be a "User" instance.
+------ error in <class 'media.views.MediaCreate'> ------
+Traceback (most recent call last):
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/elasticapm/instrumentation/packages/dbapi2.py", line 211, in execute
+    return self._trace_sql(self.__wrapped__.execute, sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/elasticapm/instrumentation/packages/dbapi2.py", line 249, in _trace_sql
+    result = method(sql, params)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+          ^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/MySQLdb/connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'deleted_at' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/amirex128/projects/selloora/selloora_main_backend/media/views.py", line 43, in post
+    result = Media.objects.create(path=path,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 671, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 812, in save
+    self.save_base(
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 863, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 1006, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/base.py", line 1047, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1791, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1660, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/debug_toolbar/panels/sql/tracking.py", line 230, in execute
+    return self._record(self.cursor.execute, sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/debug_toolbar/panels/sql/tracking.py", line 154, in _record
+    return method(sql, params)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/django/db/backends/mysql/base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/elasticapm/instrumentation/packages/dbapi2.py", line 211, in execute
+    return self._trace_sql(self.__wrapped__.execute, sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/elasticapm/instrumentation/packages/dbapi2.py", line 249, in _trace_sql
+    result = method(sql, params)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+          ^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/MySQLdb/connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'deleted_at' in 'field list'")
+------ error in <class 'media.views.MediaCreate'> ------
+Traceback (most recent call last):
+  File "/home/amirex128/projects/selloora/selloora_main_backend/media/views.py", line 43, in post
+    with open(settings.MEDIA_ROOT + '/test.jpg', 'wb+') as destination:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/amirex128/projects/selloora/mediafiles/test.jpg'
+------ error in <class 'media.views.MediaCreate'> ------
+Traceback (most recent call last):
+  File "/home/amirex128/projects/selloora/selloora_main_backend/media/views.py", line 43, in post
+    with open(settings.MEDIA_ROOT + '/test.jpg', 'wb+') as destination:
+              ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'PosixPath' and 'str'
+------ error in <class 'media.views.MediaCreate'> ------
+Traceback (most recent call last):
+  File "/home/amirex128/projects/selloora/selloora_main_backend/media/views.py", line 43, in post
+    path = default_storage.save(settings.MEDIA_ROOT+'/a.jpg', file)
+                                ~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'PosixPath' and 'str'
+------ error in <class 'media.views.MediaCreate'> ------
+Traceback (most recent call last):
+  File "/home/amirex128/projects/selloora/selloora_main_backend/media/views.py", line 43, in post
+    path = default_storage.save(settings.MEDIA_ROOT+'/a.jpg', file)
+                                ~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'PosixPath' and 'str'
+------ error in <class 'media.views.MediaCreate'> ------
+Traceback (most recent call last):
+  File "/home/amirex128/projects/selloora/selloora_main_backend/media/views.py", line 43, in post
+    path = default_storage.save(settings.MEDIA_ROOT+'/a.jpg', file)
+                                ~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'PosixPath' and 'str'
+------ error in <class 'media.views.MediaCreate'> ------
+Traceback (most recent call last):
+  File "/home/amirex128/projects/selloora/selloora_main_backend/media/views.py", line 45, in post
+    with open(os.path.join(settings.MEDIA_ROOT, '/test.jpg'), 'wb+') as destination:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '/test.jpg'
+------ error in <class 'media.views.MediaCreate'> ------
+Traceback (most recent call last):
+  File "/home/amirex128/projects/selloora/selloora_main_backend/media/views.py", line 48, in post
+    with open(os.path.join(settings.MEDIA_ROOT, name), 'wb+') as destination:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/amirex128/projects/selloora/selloora_main_backend/media/static/0c06dcb9f2b94994a77f5c50f0a361da__photo_2023-02-05_16-06-00.jpg'
+------ error in <class 'media.views.MediaCreate'> ------
+Traceback (most recent call last):
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/rest_framework/request.py", line 416, in __getattr__
+    return getattr(self._request, attr)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'build_absolute_url'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/amirex128/projects/selloora/selloora_main_backend/media/views.py", line 54, in post
+    full_path = request.build_absolute_url(path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amirex128/projects/selloora/selloora_main_backend/venv/lib/python3.11/site-packages/rest_framework/request.py", line 418, in __getattr__
+    return self.__getattribute__(attr)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Request' object has no attribute 'build_absolute_url'

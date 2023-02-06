@@ -18,3 +18,4 @@ class ArticleCategory(models.Model):
 
     class Meta:
         db_table = "article_categories"
+        ordering = ['-created_at']

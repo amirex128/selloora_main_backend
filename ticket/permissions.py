@@ -14,7 +14,7 @@ class TicketCreatePermission(BasePermission):
 
 class TicketShowPermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Ticket.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -24,7 +24,7 @@ class TicketShowPermission(BasePermission):
 
 class TicketSoftDeletePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Ticket.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -35,7 +35,7 @@ class TicketSoftDeletePermission(BasePermission):
 
 class TicketForceDeletePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Ticket.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -46,7 +46,7 @@ class TicketForceDeletePermission(BasePermission):
 
 class TicketRestorePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Ticket.objects.filter(id=pk).first()
         if model is None:
             return False

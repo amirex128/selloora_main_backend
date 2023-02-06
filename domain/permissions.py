@@ -14,7 +14,7 @@ class DomainCreatePermission(BasePermission):
 
 class DomainShowPermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Domain.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -24,7 +24,7 @@ class DomainShowPermission(BasePermission):
 
 class DomainSoftDeletePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Domain.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -35,7 +35,7 @@ class DomainSoftDeletePermission(BasePermission):
 
 class DomainForceDeletePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Domain.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -46,7 +46,7 @@ class DomainForceDeletePermission(BasePermission):
 
 class DomainRestorePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Domain.objects.filter(id=pk).first()
         if model is None:
             return False

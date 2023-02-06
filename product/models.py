@@ -26,6 +26,7 @@ class Product(models.Model):
 
     class Meta:
         db_table = "products"
+        ordering = ['-created_at']
 
 
 class Option(models.Model):
@@ -41,3 +42,4 @@ class Option(models.Model):
 
     class Meta:
         db_table = "options"
+        ordering = ['-created_at']

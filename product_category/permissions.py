@@ -14,7 +14,7 @@ class ProductCategoryCreatePermission(BasePermission):
 
 class ProductCategoryShowPermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = ProductCategory.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -25,7 +25,7 @@ class ProductCategoryShowPermission(BasePermission):
 
 class ProductCategoryUpdatePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = ProductCategory.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -36,7 +36,7 @@ class ProductCategoryUpdatePermission(BasePermission):
 
 class ProductCategorySoftDeletePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = ProductCategory.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -47,7 +47,7 @@ class ProductCategorySoftDeletePermission(BasePermission):
 
 class ProductCategoryForceDeletePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = ProductCategory.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -58,7 +58,7 @@ class ProductCategoryForceDeletePermission(BasePermission):
 
 class ProductCategoryRestorePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = ProductCategory.objects.filter(id=pk).first()
         if model is None:
             return False

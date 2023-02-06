@@ -14,7 +14,7 @@ class MediaCreatePermission(BasePermission):
 
 class MediaShowPermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Media.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -25,7 +25,7 @@ class MediaShowPermission(BasePermission):
 
 class MediaSoftDeletePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Media.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -36,7 +36,7 @@ class MediaSoftDeletePermission(BasePermission):
 
 class MediaForceDeletePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Media.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -47,7 +47,7 @@ class MediaForceDeletePermission(BasePermission):
 
 class MediaRestorePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Media.objects.filter(id=pk).first()
         if model is None:
             return False

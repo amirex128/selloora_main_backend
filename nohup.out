@@ -1,0 +1,733 @@
+OpenSSH_8.9p1 Ubuntu-3ubuntu0.1, OpenSSL 3.0.2 15 Mar 2022
+debug1: Reading configuration data /etc/ssh/ssh_config
+OpenSSH_8.9p1 Ubuntu-3ubuntu0.1, OpenSSL 3.0.2 15 Mar 2022
+debug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files
+debug1: Reading configuration data /etc/ssh/ssh_config
+OpenSSH_8.9p1 Ubuntu-3ubuntu0.1, OpenSSL 3.0.2 15 Mar 2022
+debug1: /etc/ssh/ssh_config line 21: Applying options for *
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files
+debug1: /etc/ssh/ssh_config line 56: Applying options for snappfood
+debug1: /etc/ssh/ssh_config line 21: Applying options for *
+debug1: /etc/ssh/ssh_config line 56: Applying options for snappfood
+debug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files
+debug1: /etc/ssh/ssh_config line 21: Applying options for *
+debug1: /etc/ssh/ssh_config line 56: Applying options for snappfood
+OpenSSH_8.9p1 Ubuntu-3ubuntu0.1, OpenSSL 3.0.2 15 Mar 2022
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files
+debug1: /etc/ssh/ssh_config line 21: Applying options for *
+debug1: /etc/ssh/ssh_config line 56: Applying options for snappfood
+OpenSSH_8.9p1 Ubuntu-3ubuntu0.1, OpenSSL 3.0.2 15 Mar 2022
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files
+debug1: /etc/ssh/ssh_config line 21: Applying options for *
+debug1: /etc/ssh/ssh_config line 56: Applying options for snappfood
+OpenSSH_8.9p1 Ubuntu-3ubuntu0.1, OpenSSL 3.0.2 15 Mar 2022
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files
+debug1: /etc/ssh/ssh_config line 21: Applying options for *
+OpenSSH_8.9p1 Ubuntu-3ubuntu0.1, OpenSSL 3.0.2 15 Mar 2022
+debug1: /etc/ssh/ssh_config line 56: Applying options for snappfood
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files
+debug1: /etc/ssh/ssh_config line 21: Applying options for *
+debug1: /etc/ssh/ssh_config line 56: Applying options for snappfood
+OpenSSH_8.9p1 Ubuntu-3ubuntu0.1, OpenSSL 3.0.2 15 Mar 2022
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files
+debug1: /etc/ssh/ssh_config line 21: Applying options for *
+debug1: /etc/ssh/ssh_config line 56: Applying options for snappfood
+OpenSSH_8.9p1 Ubuntu-3ubuntu0.1, OpenSSL 3.0.2 15 Mar 2022
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files
+debug1: /etc/ssh/ssh_config line 21: Applying options for *
+debug1: /etc/ssh/ssh_config line 56: Applying options for snappfood
+OpenSSH_8.9p1 Ubuntu-3ubuntu0.1, OpenSSL 3.0.2 15 Mar 2022
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files
+debug1: /etc/ssh/ssh_config line 21: Applying options for *
+debug1: /etc/ssh/ssh_config line 56: Applying options for snappfood
+debug1: Connecting to in.snappfood.ir [95.156.252.110] port 2222.
+debug1: Connecting to in.snappfood.ir [95.156.252.110] port 2222.
+debug1: Connecting to in.snappfood.ir [95.156.252.110] port 2222.
+debug1: Connecting to in.snappfood.ir [95.156.252.110] port 2222.
+debug1: Connecting to in.snappfood.ir [95.156.252.110] port 2222.
+debug1: Connecting to in.snappfood.ir [95.156.252.110] port 2222.
+debug1: Connecting to in.snappfood.ir [95.156.252.110] port 2222.
+debug1: Connection established.
+debug1: identity file /home/amirex128/.ssh/id_ecdsa type 2
+debug1: identity file /home/amirex128/.ssh/id_ecdsa-cert type 6
+debug1: Local version string SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.1
+debug1: Connection established.
+debug1: identity file /home/amirex128/.ssh/id_ecdsa type 2
+debug1: identity file /home/amirex128/.ssh/id_ecdsa-cert type 6
+debug1: Local version string SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.1
+debug1: Remote protocol version 2.0, remote software version OpenSSH_7.2p2 Ubuntu-4ubuntu2.8
+debug1: compat_banner: match: OpenSSH_7.2p2 Ubuntu-4ubuntu2.8 pat OpenSSH_7.0*,OpenSSH_7.1*,OpenSSH_7.2*,OpenSSH_7.3*,OpenSSH_7.5*,OpenSSH_7.6*,OpenSSH_7.7* compat 0x04000002
+debug1: Authenticating to in.snappfood.ir:2222 as 'zoodfood'
+debug1: load_hostkeys: fopen /home/amirex128/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256@libssh.org
+debug1: kex: host key algorithm: ssh-ed25519
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: Remote protocol version 2.0, remote software version OpenSSH_7.2p2 Ubuntu-4ubuntu2.8
+debug1: compat_banner: match: OpenSSH_7.2p2 Ubuntu-4ubuntu2.8 pat OpenSSH_7.0*,OpenSSH_7.1*,OpenSSH_7.2*,OpenSSH_7.3*,OpenSSH_7.5*,OpenSSH_7.6*,OpenSSH_7.7* compat 0x04000002
+debug1: Authenticating to in.snappfood.ir:2222 as 'zoodfood'
+debug1: load_hostkeys: fopen /home/amirex128/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: SSH2_MSG_KEXINIT sent
+debug1: Connection established.
+debug1: identity file /home/amirex128/.ssh/id_ecdsa type 2
+debug1: identity file /home/amirex128/.ssh/id_ecdsa-cert type 6
+debug1: Local version string SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.1
+debug1: SSH2_MSG_KEX_ECDH_REPLY received
+debug1: Server host key: ssh-ed25519 SHA256:hpz+bteeX4E0KsNA+alOTT7v+CJC3xYIundHwbfUOBk
+debug1: load_hostkeys: fopen /home/amirex128/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: Host '[in.snappfood.ir]:2222' is known and matches the ED25519 host key.
+debug1: Found key in /home/amirex128/.ssh/known_hosts:3
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: SSH2_MSG_NEWKEYS received
+debug1: rekey in after 134217728 blocks
+debug1: Will attempt key: /home/amirex128/.ssh/id_ecdsa ECDSA SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: Will attempt key: /home/amirex128/.ssh/id_ecdsa ECDSA-CERT SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: SSH2_MSG_EXT_INFO received
+debug1: kex_input_ext_info: server-sig-algs=<rsa-sha2-256,rsa-sha2-512>
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256@libssh.org
+debug1: kex: host key algorithm: ssh-ed25519
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: Connection established.
+debug1: identity file /home/amirex128/.ssh/id_ecdsa type 2
+debug1: identity file /home/amirex128/.ssh/id_ecdsa-cert type 6
+debug1: Local version string SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.1
+debug1: Remote protocol version 2.0, remote software version OpenSSH_7.2p2 Ubuntu-4ubuntu2.8
+debug1: compat_banner: match: OpenSSH_7.2p2 Ubuntu-4ubuntu2.8 pat OpenSSH_7.0*,OpenSSH_7.1*,OpenSSH_7.2*,OpenSSH_7.3*,OpenSSH_7.5*,OpenSSH_7.6*,OpenSSH_7.7* compat 0x04000002
+debug1: Authenticating to in.snappfood.ir:2222 as 'zoodfood'
+debug1: load_hostkeys: fopen /home/amirex128/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: SSH2_MSG_KEXINIT sent
+debug1: Remote protocol version 2.0, remote software version OpenSSH_7.2p2 Ubuntu-4ubuntu2.8
+debug1: compat_banner: match: OpenSSH_7.2p2 Ubuntu-4ubuntu2.8 pat OpenSSH_7.0*,OpenSSH_7.1*,OpenSSH_7.2*,OpenSSH_7.3*,OpenSSH_7.5*,OpenSSH_7.6*,OpenSSH_7.7* compat 0x04000002
+debug1: Authenticating to in.snappfood.ir:2222 as 'zoodfood'
+debug1: load_hostkeys: fopen /home/amirex128/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256@libssh.org
+debug1: kex: host key algorithm: ssh-ed25519
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: SSH2_MSG_KEX_ECDH_REPLY received
+debug1: Server host key: ssh-ed25519 SHA256:hpz+bteeX4E0KsNA+alOTT7v+CJC3xYIundHwbfUOBk
+debug1: load_hostkeys: fopen /home/amirex128/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: Host '[in.snappfood.ir]:2222' is known and matches the ED25519 host key.
+debug1: Found key in /home/amirex128/.ssh/known_hosts:3
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: SSH2_MSG_NEWKEYS received
+debug1: rekey in after 134217728 blocks
+debug1: Will attempt key: /home/amirex128/.ssh/id_ecdsa ECDSA SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: Will attempt key: /home/amirex128/.ssh/id_ecdsa ECDSA-CERT SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: SSH2_MSG_EXT_INFO received
+debug1: kex_input_ext_info: server-sig-algs=<rsa-sha2-256,rsa-sha2-512>
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256@libssh.org
+debug1: kex: host key algorithm: ssh-ed25519
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: Connecting to in.snappfood.ir [95.156.252.110] port 2222.
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Offering public key: /home/amirex128/.ssh/id_ecdsa ECDSA SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: SSH2_MSG_KEX_ECDH_REPLY received
+debug1: Server host key: ssh-ed25519 SHA256:hpz+bteeX4E0KsNA+alOTT7v+CJC3xYIundHwbfUOBk
+debug1: load_hostkeys: fopen /home/amirex128/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: Host '[in.snappfood.ir]:2222' is known and matches the ED25519 host key.
+debug1: Found key in /home/amirex128/.ssh/known_hosts:3
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: SSH2_MSG_NEWKEYS received
+debug1: rekey in after 134217728 blocks
+debug1: Will attempt key: /home/amirex128/.ssh/id_ecdsa ECDSA SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: Will attempt key: /home/amirex128/.ssh/id_ecdsa ECDSA-CERT SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: SSH2_MSG_EXT_INFO received
+debug1: kex_input_ext_info: server-sig-algs=<rsa-sha2-256,rsa-sha2-512>
+debug1: Connection established.
+debug1: identity file /home/amirex128/.ssh/id_ecdsa type 2
+debug1: identity file /home/amirex128/.ssh/id_ecdsa-cert type 6
+debug1: Local version string SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.1
+debug1: Connection established.
+debug1: Connection established.
+debug1: identity file /home/amirex128/.ssh/id_ecdsa type 2
+debug1: identity file /home/amirex128/.ssh/id_ecdsa type 2
+debug1: identity file /home/amirex128/.ssh/id_ecdsa-cert type 6
+debug1: identity file /home/amirex128/.ssh/id_ecdsa-cert type 6
+debug1: Local version string SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.1
+debug1: Local version string SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.1
+debug1: Remote protocol version 2.0, remote software version OpenSSH_7.2p2 Ubuntu-4ubuntu2.8
+debug1: compat_banner: match: OpenSSH_7.2p2 Ubuntu-4ubuntu2.8 pat OpenSSH_7.0*,OpenSSH_7.1*,OpenSSH_7.2*,OpenSSH_7.3*,OpenSSH_7.5*,OpenSSH_7.6*,OpenSSH_7.7* compat 0x04000002
+debug1: Authenticating to in.snappfood.ir:2222 as 'zoodfood'
+debug1: load_hostkeys: fopen /home/amirex128/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: SSH2_MSG_KEXINIT sent
+debug1: Authentications that can continue: publickey
+debug1: Offering public key: /home/amirex128/.ssh/id_ecdsa ECDSA-CERT SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: Server accepts key: /home/amirex128/.ssh/id_ecdsa ECDSA-CERT SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: Remote protocol version 2.0, remote software version OpenSSH_7.2p2 Ubuntu-4ubuntu2.8
+debug1: compat_banner: match: OpenSSH_7.2p2 Ubuntu-4ubuntu2.8 pat OpenSSH_7.0*,OpenSSH_7.1*,OpenSSH_7.2*,OpenSSH_7.3*,OpenSSH_7.5*,OpenSSH_7.6*,OpenSSH_7.7* compat 0x04000002
+debug1: Authenticating to in.snappfood.ir:2222 as 'zoodfood'
+debug1: load_hostkeys: fopen /home/amirex128/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: SSH2_MSG_KEXINIT sent
+Authenticated to in.snappfood.ir ([95.156.252.110]:2222) using "publickey".
+debug1: Local connections to 0.0.0.0:6033 forwarded to remote address 192.168.100.134:6033
+debug1: Local forwarding listening on 0.0.0.0 port 6033.
+debug1: channel 0: new [port listener]
+debug1: Requesting no-more-sessions@openssh.com
+debug1: Entering interactive session.
+debug1: pledge: filesystem
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256@libssh.org
+debug1: kex: host key algorithm: ssh-ed25519
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: client_input_global_request: rtype hostkeys-00@openssh.com want_reply 0
+debug1: client_input_hostkeys: searching /home/amirex128/.ssh/known_hosts for [in.snappfood.ir]:2222 / (none)
+debug1: client_input_hostkeys: searching /home/amirex128/.ssh/known_hosts2 for [in.snappfood.ir]:2222 / (none)
+debug1: client_input_hostkeys: hostkeys file /home/amirex128/.ssh/known_hosts2 does not exist
+debug1: client_input_hostkeys: host key found matching a different name/address, skipping UserKnownHostsFile update
+debug1: Remote protocol version 2.0, remote software version OpenSSH_7.2p2 Ubuntu-4ubuntu2.8
+debug1: compat_banner: match: OpenSSH_7.2p2 Ubuntu-4ubuntu2.8 pat OpenSSH_7.0*,OpenSSH_7.1*,OpenSSH_7.2*,OpenSSH_7.3*,OpenSSH_7.5*,OpenSSH_7.6*,OpenSSH_7.7* compat 0x04000002
+debug1: Authenticating to in.snappfood.ir:2222 as 'zoodfood'
+debug1: load_hostkeys: fopen /home/amirex128/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256@libssh.org
+debug1: kex: host key algorithm: ssh-ed25519
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Offering public key: /home/amirex128/.ssh/id_ecdsa ECDSA SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: Authentications that can continue: publickey
+debug1: Offering public key: /home/amirex128/.ssh/id_ecdsa ECDSA-CERT SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: SSH2_MSG_KEX_ECDH_REPLY received
+debug1: Server host key: ssh-ed25519 SHA256:hpz+bteeX4E0KsNA+alOTT7v+CJC3xYIundHwbfUOBk
+debug1: load_hostkeys: fopen /home/amirex128/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: Host '[in.snappfood.ir]:2222' is known and matches the ED25519 host key.
+debug1: Found key in /home/amirex128/.ssh/known_hosts:3
+debug1: SSH2_MSG_KEX_ECDH_REPLY received
+debug1: Server host key: ssh-ed25519 SHA256:hpz+bteeX4E0KsNA+alOTT7v+CJC3xYIundHwbfUOBk
+debug1: load_hostkeys: fopen /home/amirex128/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: Host '[in.snappfood.ir]:2222' is known and matches the ED25519 host key.
+debug1: Found key in /home/amirex128/.ssh/known_hosts:3
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: SSH2_MSG_NEWKEYS received
+debug1: rekey in after 134217728 blocks
+debug1: Will attempt key: /home/amirex128/.ssh/id_ecdsa ECDSA SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: Will attempt key: /home/amirex128/.ssh/id_ecdsa ECDSA-CERT SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: SSH2_MSG_EXT_INFO received
+debug1: kex_input_ext_info: server-sig-algs=<rsa-sha2-256,rsa-sha2-512>
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: SSH2_MSG_NEWKEYS received
+debug1: rekey in after 134217728 blocks
+debug1: Will attempt key: /home/amirex128/.ssh/id_ecdsa ECDSA SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: Will attempt key: /home/amirex128/.ssh/id_ecdsa ECDSA-CERT SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: SSH2_MSG_EXT_INFO received
+debug1: kex_input_ext_info: server-sig-algs=<rsa-sha2-256,rsa-sha2-512>
+debug1: Server accepts key: /home/amirex128/.ssh/id_ecdsa ECDSA-CERT SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+Authenticated to in.snappfood.ir ([95.156.252.110]:2222) using "publickey".
+debug1: Local connections to 0.0.0.0:5608 forwarded to remote address 192.168.100.228:5601
+debug1: Local forwarding listening on 0.0.0.0 port 5608.
+debug1: channel 0: new [port listener]
+debug1: Requesting no-more-sessions@openssh.com
+debug1: Entering interactive session.
+debug1: pledge: filesystem
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: Authentications that can continue: publickey
+debug1: client_input_global_request: rtype hostkeys-00@openssh.com want_reply 0
+debug1: Next authentication method: publickey
+debug1: Offering public key: /home/amirex128/.ssh/id_ecdsa ECDSA SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: client_input_hostkeys: searching /home/amirex128/.ssh/known_hosts for [in.snappfood.ir]:2222 / (none)
+debug1: client_input_hostkeys: searching /home/amirex128/.ssh/known_hosts2 for [in.snappfood.ir]:2222 / (none)
+debug1: client_input_hostkeys: hostkeys file /home/amirex128/.ssh/known_hosts2 does not exist
+debug1: client_input_hostkeys: host key found matching a different name/address, skipping UserKnownHostsFile update
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256@libssh.org
+debug1: kex: host key algorithm: ssh-ed25519
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Offering public key: /home/amirex128/.ssh/id_ecdsa ECDSA SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Offering public key: /home/amirex128/.ssh/id_ecdsa ECDSA SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: SSH2_MSG_KEX_ECDH_REPLY received
+debug1: Server host key: ssh-ed25519 SHA256:hpz+bteeX4E0KsNA+alOTT7v+CJC3xYIundHwbfUOBk
+debug1: load_hostkeys: fopen /home/amirex128/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: Host '[in.snappfood.ir]:2222' is known and matches the ED25519 host key.
+debug1: Found key in /home/amirex128/.ssh/known_hosts:3
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: SSH2_MSG_NEWKEYS received
+debug1: rekey in after 134217728 blocks
+debug1: Will attempt key: /home/amirex128/.ssh/id_ecdsa ECDSA SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: Will attempt key: /home/amirex128/.ssh/id_ecdsa ECDSA-CERT SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: SSH2_MSG_EXT_INFO received
+debug1: kex_input_ext_info: server-sig-algs=<rsa-sha2-256,rsa-sha2-512>
+debug1: Authentications that can continue: publickey
+debug1: Offering public key: /home/amirex128/.ssh/id_ecdsa ECDSA-CERT SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: Authentications that can continue: publickey
+debug1: Offering public key: /home/amirex128/.ssh/id_ecdsa ECDSA-CERT SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: Authentications that can continue: publickey
+debug1: Offering public key: /home/amirex128/.ssh/id_ecdsa ECDSA-CERT SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: Server accepts key: /home/amirex128/.ssh/id_ecdsa ECDSA-CERT SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: Server accepts key: /home/amirex128/.ssh/id_ecdsa ECDSA-CERT SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+Authenticated to in.snappfood.ir ([95.156.252.110]:2222) using "publickey".
+debug1: Local connections to 0.0.0.0:6380 forwarded to remote address 192.168.100.233:6379
+debug1: Local forwarding listening on 0.0.0.0 port 6380.
+debug1: channel 0: new [port listener]
+debug1: Requesting no-more-sessions@openssh.com
+debug1: Entering interactive session.
+debug1: pledge: filesystem
+Authenticated to in.snappfood.ir ([95.156.252.110]:2222) using "publickey".
+debug1: Local connections to 0.0.0.0:5610 forwarded to remote address 192.168.100.242:5601
+debug1: Local forwarding listening on 0.0.0.0 port 5610.
+debug1: channel 0: new [port listener]
+debug1: Requesting no-more-sessions@openssh.com
+debug1: Entering interactive session.
+debug1: pledge: filesystem
+debug1: Connecting to in.snappfood.ir [95.156.252.110] port 2222.
+debug1: client_input_global_request: rtype hostkeys-00@openssh.com want_reply 0
+debug1: client_input_hostkeys: searching /home/amirex128/.ssh/known_hosts for [in.snappfood.ir]:2222 / (none)
+debug1: client_input_hostkeys: searching /home/amirex128/.ssh/known_hosts2 for [in.snappfood.ir]:2222 / (none)
+debug1: client_input_hostkeys: hostkeys file /home/amirex128/.ssh/known_hosts2 does not exist
+debug1: client_input_hostkeys: host key found matching a different name/address, skipping UserKnownHostsFile update
+debug1: Server accepts key: /home/amirex128/.ssh/id_ecdsa ECDSA-CERT SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: client_input_global_request: rtype hostkeys-00@openssh.com want_reply 0
+debug1: client_input_hostkeys: searching /home/amirex128/.ssh/known_hosts for [in.snappfood.ir]:2222 / (none)
+debug1: client_input_hostkeys: searching /home/amirex128/.ssh/known_hosts2 for [in.snappfood.ir]:2222 / (none)
+debug1: client_input_hostkeys: hostkeys file /home/amirex128/.ssh/known_hosts2 does not exist
+debug1: client_input_hostkeys: host key found matching a different name/address, skipping UserKnownHostsFile update
+debug1: Connection established.
+debug1: identity file /home/amirex128/.ssh/id_ecdsa type 2
+debug1: identity file /home/amirex128/.ssh/id_ecdsa-cert type 6
+debug1: Local version string SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.1
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+Authenticated to in.snappfood.ir ([95.156.252.110]:2222) using "publickey".
+debug1: Local connections to 0.0.0.0:3309 forwarded to remote address 192.168.100.183:3306
+debug1: Local forwarding listening on 0.0.0.0 port 3309.
+debug1: channel 0: new [port listener]
+debug1: Requesting no-more-sessions@openssh.com
+debug1: Entering interactive session.
+debug1: pledge: filesystem
+debug1: Remote protocol version 2.0, remote software version OpenSSH_7.2p2 Ubuntu-4ubuntu2.8
+debug1: compat_banner: match: OpenSSH_7.2p2 Ubuntu-4ubuntu2.8 pat OpenSSH_7.0*,OpenSSH_7.1*,OpenSSH_7.2*,OpenSSH_7.3*,OpenSSH_7.5*,OpenSSH_7.6*,OpenSSH_7.7* compat 0x04000002
+debug1: Authenticating to in.snappfood.ir:2222 as 'zoodfood'
+debug1: load_hostkeys: fopen /home/amirex128/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: SSH2_MSG_KEXINIT sent
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Offering public key: /home/amirex128/.ssh/id_ecdsa ECDSA SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: client_input_global_request: rtype hostkeys-00@openssh.com want_reply 0
+debug1: client_input_hostkeys: searching /home/amirex128/.ssh/known_hosts for [in.snappfood.ir]:2222 / (none)
+debug1: client_input_hostkeys: searching /home/amirex128/.ssh/known_hosts2 for [in.snappfood.ir]:2222 / (none)
+debug1: client_input_hostkeys: hostkeys file /home/amirex128/.ssh/known_hosts2 does not exist
+debug1: client_input_hostkeys: host key found matching a different name/address, skipping UserKnownHostsFile update
+debug1: Authentications that can continue: publickey
+debug1: Offering public key: /home/amirex128/.ssh/id_ecdsa ECDSA-CERT SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: Server accepts key: /home/amirex128/.ssh/id_ecdsa ECDSA-CERT SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+Authenticated to in.snappfood.ir ([95.156.252.110]:2222) using "publickey".
+debug1: Local connections to 0.0.0.0:9080 forwarded to remote address 192.168.100.113:9001
+debug1: Local forwarding listening on 0.0.0.0 port 9080.
+debug1: channel 0: new [port listener]
+debug1: Requesting no-more-sessions@openssh.com
+debug1: Entering interactive session.
+debug1: pledge: filesystem
+debug1: SSH2_MSG_KEX_ECDH_REPLY received
+debug1: Server host key: ssh-ed25519 SHA256:hpz+bteeX4E0KsNA+alOTT7v+CJC3xYIundHwbfUOBk
+debug1: load_hostkeys: fopen /home/amirex128/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: Host '[in.snappfood.ir]:2222' is known and matches the ED25519 host key.
+debug1: Found key in /home/amirex128/.ssh/known_hosts:3
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: SSH2_MSG_NEWKEYS received
+debug1: rekey in after 134217728 blocks
+debug1: Will attempt key: /home/amirex128/.ssh/id_ecdsa ECDSA SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: Will attempt key: /home/amirex128/.ssh/id_ecdsa ECDSA-CERT SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: SSH2_MSG_EXT_INFO received
+debug1: kex_input_ext_info: server-sig-algs=<rsa-sha2-256,rsa-sha2-512>
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256@libssh.org
+debug1: kex: host key algorithm: ssh-ed25519
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: client_input_global_request: rtype hostkeys-00@openssh.com want_reply 0
+debug1: client_input_hostkeys: searching /home/amirex128/.ssh/known_hosts for [in.snappfood.ir]:2222 / (none)
+debug1: client_input_hostkeys: searching /home/amirex128/.ssh/known_hosts2 for [in.snappfood.ir]:2222 / (none)
+debug1: client_input_hostkeys: hostkeys file /home/amirex128/.ssh/known_hosts2 does not exist
+debug1: client_input_hostkeys: host key found matching a different name/address, skipping UserKnownHostsFile update
+debug1: Connection established.
+debug1: identity file /home/amirex128/.ssh/id_ecdsa type 2
+debug1: identity file /home/amirex128/.ssh/id_ecdsa-cert type 6
+debug1: Local version string SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.1
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: SSH2_MSG_KEX_ECDH_REPLY received
+debug1: Server host key: ssh-ed25519 SHA256:hpz+bteeX4E0KsNA+alOTT7v+CJC3xYIundHwbfUOBk
+debug1: load_hostkeys: fopen /home/amirex128/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: Host '[in.snappfood.ir]:2222' is known and matches the ED25519 host key.
+debug1: Found key in /home/amirex128/.ssh/known_hosts:3
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: SSH2_MSG_NEWKEYS received
+debug1: rekey in after 134217728 blocks
+debug1: Will attempt key: /home/amirex128/.ssh/id_ecdsa ECDSA SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: Will attempt key: /home/amirex128/.ssh/id_ecdsa ECDSA-CERT SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: SSH2_MSG_EXT_INFO received
+debug1: kex_input_ext_info: server-sig-algs=<rsa-sha2-256,rsa-sha2-512>
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Offering public key: /home/amirex128/.ssh/id_ecdsa ECDSA SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: Remote protocol version 2.0, remote software version OpenSSH_7.2p2 Ubuntu-4ubuntu2.8
+debug1: compat_banner: match: OpenSSH_7.2p2 Ubuntu-4ubuntu2.8 pat OpenSSH_7.0*,OpenSSH_7.1*,OpenSSH_7.2*,OpenSSH_7.3*,OpenSSH_7.5*,OpenSSH_7.6*,OpenSSH_7.7* compat 0x04000002
+debug1: Authenticating to in.snappfood.ir:2222 as 'zoodfood'
+debug1: load_hostkeys: fopen /home/amirex128/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256@libssh.org
+debug1: kex: host key algorithm: ssh-ed25519
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: Authentications that can continue: publickey
+debug1: Offering public key: /home/amirex128/.ssh/id_ecdsa ECDSA-CERT SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: Server accepts key: /home/amirex128/.ssh/id_ecdsa ECDSA-CERT SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Offering public key: /home/amirex128/.ssh/id_ecdsa ECDSA SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+Authenticated to in.snappfood.ir ([95.156.252.110]:2222) using "publickey".
+debug1: Local connections to 0.0.0.0:8828 forwarded to remote address 192.168.100.61:8828
+debug1: Local forwarding listening on 0.0.0.0 port 8828.
+debug1: channel 0: new [port listener]
+debug1: Requesting no-more-sessions@openssh.com
+debug1: Entering interactive session.
+debug1: pledge: filesystem
+debug1: Connecting to in.snappfood.ir [95.156.252.110] port 2222.
+debug1: client_input_global_request: rtype hostkeys-00@openssh.com want_reply 0
+debug1: client_input_hostkeys: searching /home/amirex128/.ssh/known_hosts for [in.snappfood.ir]:2222 / (none)
+debug1: client_input_hostkeys: searching /home/amirex128/.ssh/known_hosts2 for [in.snappfood.ir]:2222 / (none)
+debug1: client_input_hostkeys: hostkeys file /home/amirex128/.ssh/known_hosts2 does not exist
+debug1: client_input_hostkeys: host key found matching a different name/address, skipping UserKnownHostsFile update
+debug1: Connection established.
+debug1: identity file /home/amirex128/.ssh/id_ecdsa type 2
+debug1: identity file /home/amirex128/.ssh/id_ecdsa-cert type 6
+debug1: Local version string SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.1
+debug1: Remote protocol version 2.0, remote software version OpenSSH_7.2p2 Ubuntu-4ubuntu2.8
+debug1: compat_banner: match: OpenSSH_7.2p2 Ubuntu-4ubuntu2.8 pat OpenSSH_7.0*,OpenSSH_7.1*,OpenSSH_7.2*,OpenSSH_7.3*,OpenSSH_7.5*,OpenSSH_7.6*,OpenSSH_7.7* compat 0x04000002
+debug1: Authenticating to in.snappfood.ir:2222 as 'zoodfood'
+debug1: load_hostkeys: fopen /home/amirex128/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256@libssh.org
+debug1: kex: host key algorithm: ssh-ed25519
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: Authentications that can continue: publickey
+debug1: Offering public key: /home/amirex128/.ssh/id_ecdsa ECDSA-CERT SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: Server accepts key: /home/amirex128/.ssh/id_ecdsa ECDSA-CERT SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+Authenticated to in.snappfood.ir ([95.156.252.110]:2222) using "publickey".
+debug1: Local connections to 0.0.0.0:9293 forwarded to remote address 192.168.100.242:9200
+debug1: Local forwarding listening on 0.0.0.0 port 9293.
+debug1: channel 0: new [port listener]
+debug1: Requesting no-more-sessions@openssh.com
+debug1: Entering interactive session.
+debug1: pledge: filesystem
+debug1: client_input_global_request: rtype hostkeys-00@openssh.com want_reply 0
+debug1: client_input_hostkeys: searching /home/amirex128/.ssh/known_hosts for [in.snappfood.ir]:2222 / (none)
+debug1: client_input_hostkeys: searching /home/amirex128/.ssh/known_hosts2 for [in.snappfood.ir]:2222 / (none)
+debug1: client_input_hostkeys: hostkeys file /home/amirex128/.ssh/known_hosts2 does not exist
+debug1: client_input_hostkeys: host key found matching a different name/address, skipping UserKnownHostsFile update
+debug1: SSH2_MSG_KEX_ECDH_REPLY received
+debug1: Server host key: ssh-ed25519 SHA256:hpz+bteeX4E0KsNA+alOTT7v+CJC3xYIundHwbfUOBk
+debug1: load_hostkeys: fopen /home/amirex128/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: Host '[in.snappfood.ir]:2222' is known and matches the ED25519 host key.
+debug1: Found key in /home/amirex128/.ssh/known_hosts:3
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: SSH2_MSG_NEWKEYS received
+debug1: rekey in after 134217728 blocks
+debug1: Will attempt key: /home/amirex128/.ssh/id_ecdsa ECDSA SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: Will attempt key: /home/amirex128/.ssh/id_ecdsa ECDSA-CERT SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: SSH2_MSG_EXT_INFO received
+debug1: kex_input_ext_info: server-sig-algs=<rsa-sha2-256,rsa-sha2-512>
+debug1: SSH2_MSG_KEX_ECDH_REPLY received
+debug1: Server host key: ssh-ed25519 SHA256:hpz+bteeX4E0KsNA+alOTT7v+CJC3xYIundHwbfUOBk
+debug1: load_hostkeys: fopen /home/amirex128/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: Host '[in.snappfood.ir]:2222' is known and matches the ED25519 host key.
+debug1: Found key in /home/amirex128/.ssh/known_hosts:3
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: SSH2_MSG_NEWKEYS received
+debug1: rekey in after 134217728 blocks
+debug1: Will attempt key: /home/amirex128/.ssh/id_ecdsa ECDSA SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: Will attempt key: /home/amirex128/.ssh/id_ecdsa ECDSA-CERT SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: SSH2_MSG_EXT_INFO received
+debug1: kex_input_ext_info: server-sig-algs=<rsa-sha2-256,rsa-sha2-512>
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Offering public key: /home/amirex128/.ssh/id_ecdsa ECDSA SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: Authentications that can continue: publickey
+debug1: Offering public key: /home/amirex128/.ssh/id_ecdsa ECDSA-CERT SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: Server accepts key: /home/amirex128/.ssh/id_ecdsa ECDSA-CERT SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+Authenticated to in.snappfood.ir ([95.156.252.110]:2222) using "publickey".
+debug1: Local connections to 0.0.0.0:3314 forwarded to remote address 192.168.100.183:3306
+debug1: Local forwarding listening on 0.0.0.0 port 3314.
+debug1: channel 0: new [port listener]
+debug1: Authentications that can continue: publickey
+debug1: Requesting no-more-sessions@openssh.com
+debug1: Next authentication method: publickey
+debug1: Entering interactive session.
+debug1: pledge: filesystem
+debug1: Offering public key: /home/amirex128/.ssh/id_ecdsa ECDSA SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: Connection to port 9080 forwarding to 192.168.100.113 port 9001 requested.
+debug1: channel 1: new [direct-tcpip]
+debug1: client_input_global_request: rtype hostkeys-00@openssh.com want_reply 0
+debug1: client_input_hostkeys: searching /home/amirex128/.ssh/known_hosts for [in.snappfood.ir]:2222 / (none)
+debug1: client_input_hostkeys: searching /home/amirex128/.ssh/known_hosts2 for [in.snappfood.ir]:2222 / (none)
+debug1: client_input_hostkeys: hostkeys file /home/amirex128/.ssh/known_hosts2 does not exist
+debug1: client_input_hostkeys: host key found matching a different name/address, skipping UserKnownHostsFile update
+debug1: Authentications that can continue: publickey
+debug1: Offering public key: /home/amirex128/.ssh/id_ecdsa ECDSA-CERT SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+debug1: Server accepts key: /home/amirex128/.ssh/id_ecdsa ECDSA-CERT SHA256:xH8z2Fstivxnzj2L2fDCsChAYfgY/yAUC9iLzWTh+GA
+Authenticated to in.snappfood.ir ([95.156.252.110]:2222) using "publickey".
+debug1: Local connections to 0.0.0.0:9201 forwarded to remote address 192.168.100.228:9200
+debug1: Local forwarding listening on 0.0.0.0 port 9201.
+debug1: channel 0: new [port listener]
+debug1: Requesting no-more-sessions@openssh.com
+debug1: Entering interactive session.
+debug1: pledge: filesystem
+debug1: client_input_global_request: rtype hostkeys-00@openssh.com want_reply 0
+debug1: client_input_hostkeys: searching /home/amirex128/.ssh/known_hosts for [in.snappfood.ir]:2222 / (none)
+debug1: client_input_hostkeys: searching /home/amirex128/.ssh/known_hosts2 for [in.snappfood.ir]:2222 / (none)
+debug1: client_input_hostkeys: hostkeys file /home/amirex128/.ssh/known_hosts2 does not exist
+debug1: client_input_hostkeys: host key found matching a different name/address, skipping UserKnownHostsFile update
+debug1: Connection to port 8828 forwarding to 192.168.100.61 port 8828 requested.
+debug1: channel 1: new [direct-tcpip]
+debug1: Connection to port 3309 forwarding to 192.168.100.183 port 3306 requested.
+debug1: channel 1: new [direct-tcpip]
+debug1: Connection to port 3314 forwarding to 192.168.100.183 port 3306 requested.
+debug1: channel 1: new [direct-tcpip]
+debug1: Connection to port 3314 forwarding to 192.168.100.183 port 3306 requested.
+debug1: channel 2: new [direct-tcpip]
+debug1: Connection to port 9293 forwarding to 192.168.100.242 port 9200 requested.
+debug1: channel 1: new [direct-tcpip]
+debug1: channel 1: free: direct-tcpip: listening port 9293 for 192.168.100.242 port 9200, connect from 127.0.0.1 port 38644 to 127.0.0.1 port 9293, nchannels 2
+debug1: Connection to port 3309 forwarding to 192.168.100.183 port 3306 requested.
+debug1: channel 2: new [direct-tcpip]
+debug1: Connection to port 9293 forwarding to 192.168.100.242 port 9200 requested.
+debug1: channel 1: new [direct-tcpip]
+debug1: Connection to port 3314 forwarding to 192.168.100.183 port 3306 requested.
+debug1: channel 3: new [direct-tcpip]
+debug1: Connection to port 3314 forwarding to 192.168.100.183 port 3306 requested.
+debug1: channel 4: new [direct-tcpip]
+debug1: channel 3: free: direct-tcpip: listening port 3314 for 192.168.100.183 port 3306, connect from 127.0.0.1 port 35594 to 127.0.0.1 port 3314, nchannels 5
+debug1: channel 1: free: direct-tcpip: listening port 9293 for 192.168.100.242 port 9200, connect from 127.0.0.1 port 33848 to 127.0.0.1 port 9293, nchannels 2
+debug1: Connection to port 9293 forwarding to 192.168.100.242 port 9200 requested.
+debug1: channel 1: new [direct-tcpip]
+debug1: Connection to port 3309 forwarding to 192.168.100.183 port 3306 requested.
+debug1: channel 3: new [direct-tcpip]
+debug1: Connection to port 3309 forwarding to 192.168.100.183 port 3306 requested.
+debug1: channel 4: new [direct-tcpip]
+debug1: Connection to port 3309 forwarding to 192.168.100.183 port 3306 requested.
+debug1: channel 5: new [direct-tcpip]
+debug1: Connection to port 3314 forwarding to 192.168.100.183 port 3306 requested.
+debug1: channel 3: new [direct-tcpip]
+debug1: Connection to port 3309 forwarding to 192.168.100.183 port 3306 requested.
+debug1: channel 6: new [direct-tcpip]
+debug1: Connection to port 3309 forwarding to 192.168.100.183 port 3306 requested.
+debug1: channel 7: new [direct-tcpip]
+debug1: Connection to port 3314 forwarding to 192.168.100.183 port 3306 requested.
+debug1: channel 5: new [direct-tcpip]
+debug1: channel 5: free: direct-tcpip: listening port 3314 for 192.168.100.183 port 3306, connect from 127.0.0.1 port 33544 to 127.0.0.1 port 3314, nchannels 6
+debug1: channel 4: free: direct-tcpip: listening port 3309 for 192.168.100.183 port 3306, connect from 127.0.0.1 port 52810 to 127.0.0.1 port 3309, nchannels 8
+debug1: channel 3: free: direct-tcpip: listening port 3314 for 192.168.100.183 port 3306, connect from 127.0.0.1 port 33532 to 127.0.0.1 port 3314, nchannels 5
+debug1: channel 5: free: direct-tcpip: listening port 3309 for 192.168.100.183 port 3306, connect from 127.0.0.1 port 52826 to 127.0.0.1 port 3309, nchannels 7
+debug1: channel 3: free: direct-tcpip: listening port 3309 for 192.168.100.183 port 3306, connect from 127.0.0.1 port 52794 to 127.0.0.1 port 3309, nchannels 6
+debug1: channel 7: free: direct-tcpip: listening port 3309 for 192.168.100.183 port 3306, connect from 127.0.0.1 port 52854 to 127.0.0.1 port 3309, nchannels 5
+debug1: channel 6: free: direct-tcpip: listening port 3309 for 192.168.100.183 port 3306, connect from 127.0.0.1 port 52840 to 127.0.0.1 port 3309, nchannels 4
+debug1: channel 1: free: direct-tcpip: listening port 9293 for 192.168.100.242 port 9200, connect from 127.0.0.1 port 50026 to 127.0.0.1 port 9293, nchannels 2
+debug1: Connection to port 9293 forwarding to 192.168.100.242 port 9200 requested.
+debug1: channel 1: new [direct-tcpip]
+debug1: channel 1: free: direct-tcpip: listening port 9293 for 192.168.100.242 port 9200, connect from 127.0.0.1 port 50688 to 127.0.0.1 port 9293, nchannels 2
+debug1: Connection to port 3309 forwarding to 192.168.100.183 port 3306 requested.
+debug1: channel 3: new [direct-tcpip]
+debug1: Connection to port 3309 forwarding to 192.168.100.183 port 3306 requested.
+debug1: channel 4: new [direct-tcpip]
+debug1: Connection to port 3309 forwarding to 192.168.100.183 port 3306 requested.
+debug1: channel 5: new [direct-tcpip]
+debug1: Connection to port 3309 forwarding to 192.168.100.183 port 3306 requested.
+debug1: channel 6: new [direct-tcpip]
+debug1: channel 3: free: direct-tcpip: listening port 3309 for 192.168.100.183 port 3306, connect from 127.0.0.1 port 38126 to 127.0.0.1 port 3309, nchannels 7
+debug1: channel 4: free: direct-tcpip: listening port 3309 for 192.168.100.183 port 3306, connect from 127.0.0.1 port 38142 to 127.0.0.1 port 3309, nchannels 6
+debug1: channel 5: free: direct-tcpip: listening port 3309 for 192.168.100.183 port 3306, connect from 127.0.0.1 port 38154 to 127.0.0.1 port 3309, nchannels 5
+debug1: channel 6: free: direct-tcpip: listening port 3309 for 192.168.100.183 port 3306, connect from 127.0.0.1 port 38162 to 127.0.0.1 port 3309, nchannels 4
+debug1: Connection to port 9293 forwarding to 192.168.100.242 port 9200 requested.
+debug1: channel 1: new [direct-tcpip]
+debug1: channel 1: free: direct-tcpip: listening port 9293 for 192.168.100.242 port 9200, connect from 127.0.0.1 port 41442 to 127.0.0.1 port 9293, nchannels 2
+debug1: Connection to port 9293 forwarding to 192.168.100.242 port 9200 requested.
+debug1: channel 1: new [direct-tcpip]
+debug1: Connection to port 9293 forwarding to 192.168.100.242 port 9200 requested.
+debug1: channel 2: new [direct-tcpip]
+debug1: Connection to port 3309 forwarding to 192.168.100.183 port 3306 requested.
+debug1: channel 3: new [direct-tcpip]
+debug1: channel 3: free: direct-tcpip: listening port 3309 for 192.168.100.183 port 3306, connect from 127.0.0.1 port 50432 to 127.0.0.1 port 3309, nchannels 4
+debug1: Connection to port 9293 forwarding to 192.168.100.242 port 9200 requested.
+debug1: channel 3: new [direct-tcpip]
+debug1: Connection to port 3314 forwarding to 192.168.100.183 port 3306 requested.
+debug1: channel 3: new [direct-tcpip]
+debug1: channel 3: free: direct-tcpip: listening port 9293 for 192.168.100.242 port 9200, connect from 127.0.0.1 port 48438 to 127.0.0.1 port 9293, nchannels 4
+debug1: channel 3: free: direct-tcpip: listening port 3314 for 192.168.100.183 port 3306, connect from 127.0.0.1 port 54746 to 127.0.0.1 port 3314, nchannels 5
+debug1: channel 1: free: direct-tcpip: listening port 3314 for 192.168.100.183 port 3306, connect from 127.0.0.1 port 54922 to 127.0.0.1 port 3314, nchannels 4
+debug1: channel 2: free: direct-tcpip: listening port 3314 for 192.168.100.183 port 3306, connect from 127.0.0.1 port 54936 to 127.0.0.1 port 3314, nchannels 3
+debug1: channel 4: free: direct-tcpip: listening port 3314 for 192.168.100.183 port 3306, connect from 127.0.0.1 port 35604 to 127.0.0.1 port 3314, nchannels 2
+debug1: channel 1: free: direct-tcpip: listening port 3309 for 192.168.100.183 port 3306, connect from 127.0.0.1 port 49618 to 127.0.0.1 port 3309, nchannels 3
+debug1: channel 1: free: direct-tcpip: listening port 9080 for 192.168.100.113 port 9001, connect from 127.0.0.1 port 46120 to 127.0.0.1 port 9080, nchannels 2
+debug1: channel 1: free: direct-tcpip: listening port 8828 for 192.168.100.61 port 8828, connect from 127.0.0.1 port 41202 to 127.0.0.1 port 8828, nchannels 2
+debug1: channel 2: free: direct-tcpip: listening port 3309 for 192.168.100.183 port 3306, connect from 127.0.0.1 port 39972 to 127.0.0.1 port 3309, nchannels 2
+debug1: Connection to port 9080 forwarding to 192.168.100.113 port 9001 requested.
+debug1: channel 1: new [direct-tcpip]
+debug1: Connection to port 8828 forwarding to 192.168.100.61 port 8828 requested.
+debug1: channel 1: new [direct-tcpip]
+debug1: Connection to port 3309 forwarding to 192.168.100.183 port 3306 requested.
+debug1: channel 1: new [direct-tcpip]
+debug1: Connection to port 3314 forwarding to 192.168.100.183 port 3306 requested.
+debug1: channel 1: new [direct-tcpip]
+debug1: Connection to port 3314 forwarding to 192.168.100.183 port 3306 requested.
+debug1: channel 2: new [direct-tcpip]
+debug1: Connection to port 9293 forwarding to 192.168.100.242 port 9200 requested.
+debug1: channel 3: new [direct-tcpip]
+debug1: Connection to port 3314 forwarding to 192.168.100.183 port 3306 requested.
+debug1: channel 3: new [direct-tcpip]
+debug1: channel 3: free: direct-tcpip: listening port 9293 for 192.168.100.242 port 9200, connect from 127.0.0.1 port 60192 to 127.0.0.1 port 9293, nchannels 4
+debug1: Connection to port 3309 forwarding to 192.168.100.183 port 3306 requested.
+debug1: channel 2: new [direct-tcpip]
+debug1: channel 1: free: direct-tcpip: listening port 3314 for 192.168.100.183 port 3306, connect from 127.0.0.1 port 56950 to 127.0.0.1 port 3314, nchannels 4
+debug1: channel 3: free: direct-tcpip: listening port 3314 for 192.168.100.183 port 3306, connect from 127.0.0.1 port 60464 to 127.0.0.1 port 3314, nchannels 3
+debug1: channel 1: free: direct-tcpip: listening port 3309 for 192.168.100.183 port 3306, connect from 127.0.0.1 port 46468 to 127.0.0.1 port 3309, nchannels 3
+debug1: channel 1: free: direct-tcpip: listening port 8828 for 192.168.100.61 port 8828, connect from 127.0.0.1 port 51716 to 127.0.0.1 port 8828, nchannels 2
+debug1: channel 1: free: direct-tcpip: listening port 9080 for 192.168.100.113 port 9001, connect from 127.0.0.1 port 53960 to 127.0.0.1 port 9080, nchannels 2
+debug1: channel 2: free: direct-tcpip: listening port 3314 for 192.168.100.183 port 3306, connect from 127.0.0.1 port 56964 to 127.0.0.1 port 3314, nchannels 2
+debug1: channel 2: free: direct-tcpip: listening port 3309 for 192.168.100.183 port 3306, connect from 127.0.0.1 port 52902 to 127.0.0.1 port 3309, nchannels 2
+debug1: Connection to port 9080 forwarding to 192.168.100.113 port 9001 requested.
+debug1: channel 1: new [direct-tcpip]
+debug1: Connection to port 8828 forwarding to 192.168.100.61 port 8828 requested.
+debug1: channel 1: new [direct-tcpip]
+debug1: Connection to port 3309 forwarding to 192.168.100.183 port 3306 requested.
+debug1: channel 1: new [direct-tcpip]
+debug1: Connection to port 3314 forwarding to 192.168.100.183 port 3306 requested.
+debug1: channel 1: new [direct-tcpip]
+debug1: Connection to port 3314 forwarding to 192.168.100.183 port 3306 requested.
+debug1: channel 2: new [direct-tcpip]
+debug1: Connection to port 9293 forwarding to 192.168.100.242 port 9200 requested.
+debug1: channel 3: new [direct-tcpip]
+debug1: channel 3: free: direct-tcpip: listening port 9293 for 192.168.100.242 port 9200, connect from 127.0.0.1 port 34132 to 127.0.0.1 port 9293, nchannels 4
+debug1: Connection to port 9293 forwarding to 192.168.100.242 port 9200 requested.
+debug1: channel 3: new [direct-tcpip]
+debug1: channel 3: free: direct-tcpip: listening port 9293 for 192.168.100.242 port 9200, connect from 127.0.0.1 port 40272 to 127.0.0.1 port 9293, nchannels 4
+debug1: Connection to port 3309 forwarding to 192.168.100.183 port 3306 requested.
+debug1: channel 2: new [direct-tcpip]
+debug1: Connection to port 3314 forwarding to 192.168.100.183 port 3306 requested.
+debug1: channel 3: new [direct-tcpip]
+debug1: Connection to port 8828 forwarding to 192.168.100.61 port 8828 requested.
+debug1: channel 2: new [direct-tcpip]
+debug1: channel 1: free: direct-tcpip: listening port 8828 for 192.168.100.61 port 8828, connect from 127.0.0.1 port 52974 to 127.0.0.1 port 8828, nchannels 3
+channel 2: open failed: connect failed: Connection refused
+debug1: channel 2: free: direct-tcpip: listening port 8828 for 192.168.100.61 port 8828, connect from 127.0.0.1 port 35812 to 127.0.0.1 port 8828, nchannels 2
+debug1: Connection to port 8828 forwarding to 192.168.100.61 port 8828 requested.
+debug1: channel 1: new [direct-tcpip]
+channel 1: open failed: connect failed: Connection refused
+debug1: channel 1: free: direct-tcpip: listening port 8828 for 192.168.100.61 port 8828, connect from 127.0.0.1 port 35824 to 127.0.0.1 port 8828, nchannels 2
+debug1: Connection to port 8828 forwarding to 192.168.100.61 port 8828 requested.
+debug1: channel 1: new [direct-tcpip]
+channel 1: open failed: connect failed: Connection refused
+debug1: channel 1: free: direct-tcpip: listening port 8828 for 192.168.100.61 port 8828, connect from 127.0.0.1 port 35002 to 127.0.0.1 port 8828, nchannels 2
+debug1: Connection to port 8828 forwarding to 192.168.100.61 port 8828 requested.
+debug1: channel 1: new [direct-tcpip]
+debug1: channel 1: free: direct-tcpip: listening port 3309 for 192.168.100.183 port 3306, connect from 127.0.0.1 port 41324 to 127.0.0.1 port 3309, nchannels 3
+debug1: channel 1: free: direct-tcpip: listening port 3314 for 192.168.100.183 port 3306, connect from 127.0.0.1 port 52530 to 127.0.0.1 port 3314, nchannels 4
+debug1: channel 1: free: direct-tcpip: listening port 9080 for 192.168.100.113 port 9001, connect from 127.0.0.1 port 38746 to 127.0.0.1 port 9080, nchannels 2
+debug1: channel 1: free: direct-tcpip: listening port 8828 for 192.168.100.61 port 8828, connect from 127.0.0.1 port 35010 to 127.0.0.1 port 8828, nchannels 2
+debug1: channel 2: free: direct-tcpip: listening port 3309 for 192.168.100.183 port 3306, connect from 127.0.0.1 port 35770 to 127.0.0.1 port 3309, nchannels 2
+debug1: channel 2: free: direct-tcpip: listening port 3314 for 192.168.100.183 port 3306, connect from 127.0.0.1 port 52546 to 127.0.0.1 port 3314, nchannels 3
+debug1: channel 3: free: direct-tcpip: listening port 3314 for 192.168.100.183 port 3306, connect from 127.0.0.1 port 45676 to 127.0.0.1 port 3314, nchannels 2
+debug1: channel 2: free: direct-tcpip: listening port 9293 for 192.168.100.242 port 9200, connect from 127.0.0.1 port 60758 to 127.0.0.1 port 9293, nchannels 3
+debug1: channel 1: free: direct-tcpip: listening port 9293 for 192.168.100.242 port 9200, connect from 127.0.0.1 port 60744 to 127.0.0.1 port 9293, nchannels 2

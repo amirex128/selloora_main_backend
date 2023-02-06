@@ -4,6 +4,10 @@ from shop.models import Shop
 from user.models import User
 from .models import Domain
 
+class DomainIndexSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Domain
+        fields = '__all__'
 
 class DomainSerializer(serializers.ModelSerializer):
     class Meta:

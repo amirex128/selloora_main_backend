@@ -14,4 +14,5 @@ class City(models.Model):
     province = models.ForeignKey(Province, on_delete=models.CASCADE, related_name='cities')
 
     class Meta:
+        verbose_name_plural = 'Cities'
         db_table = "cities"

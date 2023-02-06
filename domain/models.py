@@ -19,3 +19,4 @@ class Domain(models.Model):
 
     class Meta:
         db_table = "domains"
+        ordering = ['-created_at']

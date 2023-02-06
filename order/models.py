@@ -51,7 +51,7 @@ class Order(models.Model):
 
     class Meta:
         db_table = "orders"
-
+        ordering = ['-created_at']
 
 class OrderItem(models.Model):
     id = models.BigAutoField(primary_key=True)
@@ -79,3 +79,4 @@ class OrderItem(models.Model):
 
     class Meta:
         db_table = "order_items"
+        ordering = ['-created_at']

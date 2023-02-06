@@ -14,7 +14,7 @@ class OrderCreatePermission(BasePermission):
 
 class OrderShowPermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Order.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -25,7 +25,7 @@ class OrderShowPermission(BasePermission):
 
 class OrderSoftDeletePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Order.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -36,7 +36,7 @@ class OrderSoftDeletePermission(BasePermission):
 
 class OrderForceDeletePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Order.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -47,7 +47,7 @@ class OrderForceDeletePermission(BasePermission):
 
 class OrderRestorePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Order.objects.filter(id=pk).first()
         if model is None:
             return False

@@ -17,4 +17,5 @@ class Ticket(models.Model):
     media = models.ForeignKey(Media, on_delete=models.SET_NULL, null=True, related_name='tickets')
 
     class Meta:
+        ordering = ['-created_at']
         db_table = "tickets"

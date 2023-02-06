@@ -20,3 +20,4 @@ class ProductComment(models.Model):
 
     class Meta:
         db_table = "product_comments"
+        ordering = ['-created_at']

@@ -14,18 +14,7 @@ class ProductCommentCreatePermission(BasePermission):
 
 class ProductCommentShowPermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
-        model = ProductComment.objects.filter(id=pk).first()
-        if model is None:
-            return False
-        if model.user_id != request.user.id:
-            return False
-        return True
-
-
-class ProductCommentUpdatePermission(BasePermission):
-    def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = ProductComment.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -36,7 +25,7 @@ class ProductCommentUpdatePermission(BasePermission):
 
 class ProductCommentSoftDeletePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = ProductComment.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -47,7 +36,7 @@ class ProductCommentSoftDeletePermission(BasePermission):
 
 class ProductCommentForceDeletePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = ProductComment.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -58,7 +47,7 @@ class ProductCommentForceDeletePermission(BasePermission):
 
 class ProductCommentRestorePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = ProductComment.objects.filter(id=pk).first()
         if model is None:
             return False

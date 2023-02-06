@@ -1,0 +1,56 @@
+AddressIndex
+AddressIndsasssssssssssssssssssssssssssssssssex
+AddressIndsasssssssssssssssssssssssssssssssssex
+SELECT `addresses`.`id`, `addresses`.`title`, `addresses`.`address`, `addresses`.`postal_code`, `addresses`.`mobile`, `addresses`.`full_name`, `addresses`.`lat`, `addresses`.`long`, `addresses`.`created_at`, `addresses`.`updated_at`, `addresses`.`deleted_at`, `addresses`.`user_id`, `addresses`.`province_id`, `addresses`.`city_id` FROM `addresses` INNER JOIN `users` ON (`addresses`.`user_id` = `users`.`id`) INNER JOIN `discounts` ON (`users`.`id` = `discounts`.`user_id`) INNER JOIN `discounts_products` ON (`discounts`.`id` = `discounts_products`.`discount_id`) INNER JOIN `products` ON (`discounts_products`.`product_id` = `products`.`id`) WHERE `products`.`name` = test ORDER BY `addresses`.`created_at` DESC
+SELECT `addresses`.`id`, `addresses`.`title`, `addresses`.`address`, `addresses`.`postal_code`, `addresses`.`mobile`, `addresses`.`full_name`, `addresses`.`lat`, `addresses`.`long`, `addresses`.`created_at`, `addresses`.`updated_at`, `addresses`.`deleted_at`, `addresses`.`user_id`, `addresses`.`province_id`, `addresses`.`city_id` FROM `addresses` INNER JOIN `users` ON (`addresses`.`user_id` = `users`.`id`) INNER JOIN `discounts` ON (`users`.`id` = `discounts`.`user_id`) INNER JOIN `discounts_products` ON (`discounts`.`id` = `discounts_products`.`discount_id`) INNER JOIN `products` ON (`discounts_products`.`product_id` = `products`.`id`) WHERE `products`.`name` = test ORDER BY `addresses`.`created_at` DESC
+<QuerySet []>
+Total time: 0.009101629257202148 
+
+Total queries: 1 
+
+Queries: [{'sql': 'SELECT COUNT(*) AS `__count` FROM `addresses` WHERE `addresses`.`deleted_at` IS NULL', 'time': '0.002'}] 
+
+Total time: 0.006525993347167969 
+
+Total queries: 1 
+
+Queries: [{'sql': 'SELECT COUNT(*) AS `__count` FROM `addresses` WHERE `addresses`.`deleted_at` IS NULL', 'time': '0.002'}] 
+
+Total time: 0.008035898208618164 
+
+Total queries: 1 
+
+Query: SELECT COUNT(*) AS `__count` FROM `addresses` WHERE `addresses`.`deleted_at` IS NULL ---
+Time: 0.002 
+
+Total time: 0.0059909820556640625 
+
+Total queries: 1 
+
+Query: SELECT COUNT(*) AS `__count` FROM `addresses` WHERE `addresses`.`deleted_at` IS NULL ---
+Time: 0.002 
+
+<------------------------------------------------>
+
+Total time: 0.008367300033569336 
+
+Total queries: 1 
+
+Query: SELECT COUNT(*) AS `__count` FROM `addresses` WHERE `addresses`.`deleted_at` IS NULL
+
+Time: 0.002 
+
+<------------------------------------------------>
+
+Total time: 0.008610248565673828 
+
+Total queries: 1 
+
+Query: SELECT COUNT(*) AS `__count` FROM `addresses` WHERE `addresses`.`deleted_at` IS NULL --- Time : 0.002
+<------------------------------------------------>
+
+Total time: 0.0051958560943603516 
+
+Total queries: 1 
+
+Query: SELECT COUNT(*) AS `__count` FROM `addresses` WHERE `addresses`.`deleted_at` IS NULL --- Time : 0.001

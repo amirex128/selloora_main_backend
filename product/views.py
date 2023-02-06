@@ -1,79 +1,124 @@
-from datetime import datetime
 
+from django.utils import timezone
+from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
-
+from utils import messages, exceptions
+from utils import debuger
 from .models import Product
 from .permissions import ProductIndexPermission, ProductCreatePermission, ProductShowPermission, \
     ProductUpdatePermission, ProductSoftDeletePermission, ProductForceDeletePermission, \
     ProductRestorePermission
-from .serializers import ProductCreateSerializer, ProductUpdateSerializer, ProductSerializer
+from .serializers import ProductCreateSerializer, ProductUpdateSerializer, ProductSerializer, ProductIndexSerializer
 
 
-class ProductIndex(APIView):
+class ProductIndex(APIView, PageNumberPagination):
     permission_classes = [IsAuthenticated & ProductIndexPermission]
 
     def get(self, request):
-        addresses = ProductSerializer(Product.objects.filter(deleted_at__isnull=True), many=True)
-        return Response(addresses)
+        try:
+            model = Product.objects.filter(deleted_at__isnull=True,user_id=request.user.id)
+            self.page_size = request.GET.get('page_size', 10)
+            result = self.paginate_queryset(model, request)
+            return self.get_paginated_response(ProductIndexSerializer(result, many=True).data)
+        except Exception as e:
+            return exceptions.default_exception(self, e)
 
 
 class ProductCreate(APIView):
     permission_classes = [IsAuthenticated & ProductCreatePermission]
 
     def post(self, request):
-        serializer = ProductCreateSerializer(data=request.data,context={'request': request})
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
-        return Response(serializer.errors)
+        try:
+            serializer = ProductCreateSerializer(data=request.data, context={'request': request})
+            if serializer.is_valid():
+                result = serializer.save()
+                return Response({
+                    'message': messages.CREATED,
+                    'data': ProductIndexSerializer(result).data
+                })
+            else:
+                return Response(serializer.errors)
+        except Exception as e:
+            return exceptions.default_exception(self, e)
+
 
 
 class ProductShow(APIView):
     permission_classes = [IsAuthenticated & ProductShowPermission]
 
     def get(self, request, pk):
-        address = Product.objects.get(pk=pk)
-        return Response(address)
+        try:
+            model = Product.objects.select_related('province', 'city').get(pk=pk)
+            return Response(ProductSerializer(model).data)
+        except Exception as e:
+            return exceptions.default_exception(self, e)
+
 
 
 class ProductUpdate(APIView):
     permission_classes = [IsAuthenticated & ProductUpdatePermission]
 
     def put(self, request, pk):
-        address = Product.objects.get(pk=pk)
-        serializer = ProductUpdateSerializer(address, data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
-        return Response(serializer.errors)
+        try:
+            model = Product.objects.get(pk=pk)
+            serializer = ProductUpdateSerializer(model, data=request.data)
+            if serializer.is_valid():
+                result = serializer.save()
+                return Response({
+                    'message': messages.UPDATED,
+                    'data': ProductIndexSerializer(result).data
+                })
+            else:
+                return Response(serializer.errors)
+        except Exception as e:
+            return exceptions.default_exception(self, e)
+
 
 
 class ProductSoftDelete(APIView):
     permission_classes = [IsAuthenticated & ProductSoftDeletePermission]
 
     def delete(self, request, pk):
-        address = Product.objects.get(pk=pk)
-        address.deleted_at = datetime.now()
-        address.save()
-        return Response('Deleted')
+        try:
+            model = Product.objects.get(pk=pk)
+            model.deleted_at = timezone.now()
+            model.save()
+            return Response({
+                'message': messages.DELETED
+            })
+        except Exception as e:
+            return exceptions.default_exception(self, e)
+
 
 
 class ProductForceDelete(APIView):
     permission_classes = [IsAuthenticated & ProductForceDeletePermission]
 
     def delete(self, request, pk):
-        address = Product.objects.get(pk=pk)
-        address.delete()
-        return Response('Deleted')
+        try:
+            address = Product.objects.get(pk=pk)
+            address.delete()
+            return Response({
+                'message': messages.FORCE_DELETED
+            })
+        except Exception as e:
+            return exceptions.default_exception(self, e)
+
 
 
 class ProductRestore(APIView):
     permission_classes = [IsAuthenticated & ProductRestorePermission]
 
     def put(self, request, pk):
-        address = Product.objects.get(pk=pk)
-        address.deleted_at = None
-        address.save()
-        return Response('Restored')
+        try:
+            address = Product.objects.get(pk=pk)
+            address.deleted_at = None
+            address.save()
+            return Response({
+                'message': messages.RESTORE_DELETED
+            })
+        except Exception as e:
+            return exceptions.default_exception(self, e)
+

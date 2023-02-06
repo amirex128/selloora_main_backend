@@ -14,7 +14,7 @@ class AddressCreatePermission(BasePermission):
 
 class AddressShowPermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Address.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -25,7 +25,7 @@ class AddressShowPermission(BasePermission):
 
 class AddressUpdatePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Address.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -36,7 +36,7 @@ class AddressUpdatePermission(BasePermission):
 
 class AddressSoftDeletePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Address.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -47,7 +47,7 @@ class AddressSoftDeletePermission(BasePermission):
 
 class AddressForceDeletePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Address.objects.filter(id=pk).first()
         if model is None:
             return False
@@ -58,7 +58,7 @@ class AddressForceDeletePermission(BasePermission):
 
 class AddressRestorePermission(BasePermission):
     def has_permission(self, request, view):
-        pk = request.resolver_match.kwargs.get('id')
+        pk = request.resolver_match.kwargs.get('pk')
         model = Address.objects.filter(id=pk).first()
         if model is None:
             return False

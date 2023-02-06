@@ -10,10 +10,10 @@ class Media(models.Model):
     mime_type = models.CharField(max_length=255)
     size = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    deleted_at = models.DateTimeField(null=True)
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE,related_name='media')
-
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='media')
 
     class Meta:
+        ordering = ['-created_at']
         db_table = "media"
