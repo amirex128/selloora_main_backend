@@ -36,7 +36,7 @@ class ProductCreate(APIView):
                 result = serializer.save()
                 return Response({
                     'message': messages.CREATED,
-                    'data': ProductIndexSerializer(result).data
+                    'data': ProductSerializer(result).data
                 })
             else:
                 return Response(serializer.errors)
@@ -50,7 +50,7 @@ class ProductShow(APIView):
 
     def get(self, request, pk):
         try:
-            model = Product.objects.select_related('province', 'city').get(pk=pk)
+            model = Product.objects.get(pk=pk)
             return Response(ProductSerializer(model).data)
         except Exception as e:
             return exceptions.default_exception(self, e)
@@ -68,7 +68,7 @@ class ProductUpdate(APIView):
                 result = serializer.save()
                 return Response({
                     'message': messages.UPDATED,
-                    'data': ProductIndexSerializer(result).data
+                    'data': ProductSerializer(result).data
                 })
             else:
                 return Response(serializer.errors)

@@ -34,7 +34,7 @@ class ArticleCommentCreate(APIView):
                 result = serializer.save()
                 return Response({
                     'message': messages.CREATED,
-                    'data': ArticleCommentIndexSerializer(result).data
+                    'data': ArticleCommentSerializer(result).data
                 })
             else:
                 return Response(serializer.errors)
@@ -48,7 +48,7 @@ class ArticleCommentShow(APIView):
 
     def get(self, request, pk):
         try:
-            model = ArticleComment.objects.select_related('province', 'city').get(pk=pk)
+            model = ArticleComment.objects.get(pk=pk)
             return Response(ArticleCommentSerializer(model).data)
         except Exception as e:
             return exceptions.default_exception(self, e)

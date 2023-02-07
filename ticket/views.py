@@ -35,7 +35,7 @@ class TicketCreate(APIView):
                 result = serializer.save()
                 return Response({
                     'message': messages.CREATED,
-                    'data': TicketIndexSerializer(result).data
+                    'data': TicketSerializer(result).data
                 })
             else:
                 return Response(serializer.errors)
@@ -49,7 +49,7 @@ class TicketShow(APIView):
 
     def get(self, request, pk):
         try:
-            model = Ticket.objects.select_related('province', 'city').get(pk=pk)
+            model = Ticket.objects.get(pk=pk)
             return Response(TicketSerializer(model).data)
         except Exception as e:
             return exceptions.default_exception(self, e)

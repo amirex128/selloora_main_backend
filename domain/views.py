@@ -35,7 +35,7 @@ class DomainCreate(APIView):
                 result = serializer.save()
                 return Response({
                     'message': messages.CREATED,
-                    'data': DomainIndexSerializer(result).data
+                    'data': DomainSerializer(result).data
                 })
             else:
                 return Response(serializer.errors)
@@ -49,7 +49,7 @@ class DomainShow(APIView):
 
     def get(self, request, pk):
         try:
-            model = Domain.objects.select_related('province', 'city').get(pk=pk)
+            model = Domain.objects.get(pk=pk)
             return Response(DomainSerializer(model).data)
         except Exception as e:
             return exceptions.default_exception(self, e)

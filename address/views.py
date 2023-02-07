@@ -35,7 +35,7 @@ class AddressCreate(APIView):
                 result = serializer.save()
                 return Response({
                     'message': messages.CREATED,
-                    'data': AddressIndexSerializer(result).data
+                    'data': AddressSerializer(result).data
                 })
             else:
                 return Response(serializer.errors)
@@ -48,7 +48,7 @@ class AddressShow(APIView):
 
     def get(self, request, pk):
         try:
-            model = Address.objects.select_related('province', 'city').get(pk=pk)
+            model = Address.objects.get(pk=pk)
             return Response(AddressSerializer(model).data)
         except Exception as e:
             return exceptions.default_exception(self, e)
@@ -65,7 +65,7 @@ class AddressUpdate(APIView):
                 result = serializer.save()
                 return Response({
                     'message': messages.UPDATED,
-                    'data': AddressIndexSerializer(result).data
+                    'data': AddressSerializer(result).data
                 })
             else:
                 return Response(serializer.errors)
@@ -115,3 +115,4 @@ class AddressRestore(APIView):
             })
         except Exception as e:
             return exceptions.default_exception(self, e)
+

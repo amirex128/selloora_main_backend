@@ -1,4 +1,3 @@
-
 from django.utils import timezone
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import IsAuthenticated
@@ -10,7 +9,8 @@ from .models import ProductCategory
 from .permissions import ProductCategoryIndexPermission, ProductCategoryCreatePermission, ProductCategoryShowPermission, \
     ProductCategoryUpdatePermission, ProductCategorySoftDeletePermission, ProductCategoryForceDeletePermission, \
     ProductCategoryRestorePermission
-from .serializers import ProductCategoryCreateSerializer, ProductCategoryUpdateSerializer, ProductCategorySerializer, ProductCategoryIndexSerializer
+from .serializers import ProductCategoryCreateSerializer, ProductCategoryUpdateSerializer, ProductCategorySerializer, \
+    ProductCategoryIndexSerializer, ProductCategoryUpdateSortSerializer
 
 
 class ProductCategoryIndex(APIView, PageNumberPagination):
@@ -18,7 +18,7 @@ class ProductCategoryIndex(APIView, PageNumberPagination):
 
     def get(self, request):
         try:
-            model = ProductCategory.objects.filter(deleted_at__isnull=True,user_id=request.user.id)
+            model = ProductCategory.objects.filter(deleted_at__isnull=True, user_id=request.user.id)
             self.page_size = request.GET.get('page_size', 10)
             result = self.paginate_queryset(model, request)
             return self.get_paginated_response(ProductCategoryIndexSerializer(result, many=True).data)
@@ -36,7 +36,7 @@ class ProductCategoryCreate(APIView):
                 result = serializer.save()
                 return Response({
                     'message': messages.CREATED,
-                    'data': ProductCategoryIndexSerializer(result).data
+                    'data': ProductCategorySerializer(result).data
                 })
             else:
                 return Response(serializer.errors)
@@ -44,17 +44,15 @@ class ProductCategoryCreate(APIView):
             return exceptions.default_exception(self, e)
 
 
-
 class ProductCategoryShow(APIView):
     permission_classes = [IsAuthenticated & ProductCategoryShowPermission]
 
     def get(self, request, pk):
         try:
-            model = ProductCategory.objects.select_related('province', 'city').get(pk=pk)
+            model = ProductCategory.objects.get(pk=pk)
             return Response(ProductCategorySerializer(model).data)
         except Exception as e:
             return exceptions.default_exception(self, e)
-
 
 
 class ProductCategoryUpdate(APIView):
@@ -68,13 +66,33 @@ class ProductCategoryUpdate(APIView):
                 result = serializer.save()
                 return Response({
                     'message': messages.UPDATED,
-                    'data': ProductCategoryIndexSerializer(result).data
+                    'data': ProductCategorySerializer(result).data
                 })
             else:
                 return Response(serializer.errors)
         except Exception as e:
             return exceptions.default_exception(self, e)
 
+
+class ProductCategoryUpdateSort(APIView):
+    permission_classes = [IsAuthenticated & ProductCategoryIndexPermission]
+
+    def put(self, request):
+        try:
+            serializer = ProductCategoryUpdateSortSerializer(data=request.data)
+            if serializer.is_valid():
+                sorts = serializer.data.get('sorts')
+                for sort in sorts:
+                    article_category = ProductCategory.objects.get(id=sort['id'])
+                    article_category.sort = sort['sort']
+                    article_category.save()
+                return Response({
+                    'message': messages.UPDATED,
+                })
+            else:
+                return Response(serializer.errors)
+        except Exception as e:
+            return exceptions.default_exception(self, e)
 
 
 class ProductCategorySoftDelete(APIView):
@@ -92,7 +110,6 @@ class ProductCategorySoftDelete(APIView):
             return exceptions.default_exception(self, e)
 
 
-
 class ProductCategoryForceDelete(APIView):
     permission_classes = [IsAuthenticated & ProductCategoryForceDeletePermission]
 
@@ -105,7 +122,6 @@ class ProductCategoryForceDelete(APIView):
             })
         except Exception as e:
             return exceptions.default_exception(self, e)
-
 
 
 class ProductCategoryRestore(APIView):
@@ -121,4 +137,3 @@ class ProductCategoryRestore(APIView):
             })
         except Exception as e:
             return exceptions.default_exception(self, e)
-

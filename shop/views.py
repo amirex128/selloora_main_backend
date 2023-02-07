@@ -36,7 +36,7 @@ class ShopCreate(APIView):
                 result = serializer.save()
                 return Response({
                     'message': messages.CREATED,
-                    'data': ShopIndexSerializer(result).data
+                    'data': ShopSerializer(result).data
                 })
             else:
                 return Response(serializer.errors)
@@ -50,7 +50,7 @@ class ShopShow(APIView):
 
     def get(self, request, pk):
         try:
-            model = Shop.objects.select_related('province', 'city').get(pk=pk)
+            model = Shop.objects.get(pk=pk)
             return Response(ShopSerializer(model).data)
         except Exception as e:
             return exceptions.default_exception(self, e)
@@ -68,7 +68,7 @@ class ShopUpdate(APIView):
                 result = serializer.save()
                 return Response({
                     'message': messages.UPDATED,
-                    'data': ShopIndexSerializer(result).data
+                    'data': ShopSerializer(result).data
                 })
             else:
                 return Response(serializer.errors)

@@ -36,7 +36,7 @@ class DiscountCreate(APIView):
                 result = serializer.save()
                 return Response({
                     'message': messages.CREATED,
-                    'data': DiscountIndexSerializer(result).data
+                    'data': DiscountSerializer(result).data
                 })
             else:
                 return Response(serializer.errors)
@@ -50,7 +50,7 @@ class DiscountShow(APIView):
 
     def get(self, request, pk):
         try:
-            model = Discount.objects.select_related('province', 'city').get(pk=pk)
+            model = Discount.objects.get(pk=pk)
             return Response(DiscountSerializer(model).data)
         except Exception as e:
             return exceptions.default_exception(self, e)
@@ -68,7 +68,7 @@ class DiscountUpdate(APIView):
                 result = serializer.save()
                 return Response({
                     'message': messages.UPDATED,
-                    'data': DiscountIndexSerializer(result).data
+                    'data': DiscountSerializer(result).data
                 })
             else:
                 return Response(serializer.errors)

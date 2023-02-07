@@ -64,7 +64,7 @@ class MediaCreate(APIView):
                                               user_id=request.user.id)
                 return Response({
                     'message': messages.CREATED,
-                    'data': MediaIndexSerializer(result).data
+                    'data': MediaSerializer(result).data
                 })
             else:
                 return Response(serializer.errors)
@@ -77,7 +77,7 @@ class MediaShow(APIView):
 
     def get(self, request, pk):
         try:
-            model = Media.objects.select_related('province', 'city').get(pk=pk)
+            model = Media.objects.get(pk=pk)
             return Response(MediaSerializer(model).data)
         except Exception as e:
             return exceptions.default_exception(self, e)

@@ -36,7 +36,7 @@ class ArticleCreate(APIView):
                 result = serializer.save()
                 return Response({
                     'message': messages.CREATED,
-                    'data': ArticleIndexSerializer(result).data
+                    'data': ArticleSerializer(result).data
                 })
             else:
                 return Response(serializer.errors)
@@ -50,7 +50,7 @@ class ArticleShow(APIView):
 
     def get(self, request, pk):
         try:
-            model = Article.objects.select_related('province', 'city').get(pk=pk)
+            model = Article.objects.select_related('media').get(pk=pk)
             return Response(ArticleSerializer(model).data)
         except Exception as e:
             return exceptions.default_exception(self, e)
@@ -68,7 +68,7 @@ class ArticleUpdate(APIView):
                 result = serializer.save()
                 return Response({
                     'message': messages.UPDATED,
-                    'data': ArticleIndexSerializer(result).data
+                    'data': ArticleSerializer(result).data
                 })
             else:
                 return Response(serializer.errors)

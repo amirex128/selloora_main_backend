@@ -35,7 +35,7 @@ class OrderCreate(APIView):
                 result = serializer.save()
                 return Response({
                     'message': messages.CREATED,
-                    'data': OrderIndexSerializer(result).data
+                    'data': OrderSerializer(result).data
                 })
             else:
                 return Response(serializer.errors)
@@ -49,7 +49,7 @@ class OrderShow(APIView):
 
     def get(self, request, pk):
         try:
-            model = Order.objects.select_related('province', 'city').get(pk=pk)
+            model = Order.objects.get(pk=pk)
             return Response(OrderSerializer(model).data)
         except Exception as e:
             return exceptions.default_exception(self, e)

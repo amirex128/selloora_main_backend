@@ -1,4 +1,3 @@
-
 from django.utils import timezone
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import IsAuthenticated
@@ -10,7 +9,8 @@ from .models import ArticleCategory
 from .permissions import ArticleCategoryIndexPermission, ArticleCategoryCreatePermission, ArticleCategoryShowPermission, \
     ArticleCategoryUpdatePermission, ArticleCategorySoftDeletePermission, ArticleCategoryForceDeletePermission, \
     ArticleCategoryRestorePermission
-from .serializers import ArticleCategoryCreateSerializer, ArticleCategoryUpdateSerializer, ArticleCategorySerializer, ArticleCategoryIndexSerializer
+from .serializers import ArticleCategoryCreateSerializer, ArticleCategoryUpdateSerializer, ArticleCategorySerializer, \
+    ArticleCategoryIndexSerializer, ArticleCategoryUpdateSortSerializer
 
 
 class ArticleCategoryIndex(APIView, PageNumberPagination):
@@ -18,7 +18,7 @@ class ArticleCategoryIndex(APIView, PageNumberPagination):
 
     def get(self, request):
         try:
-            model = ArticleCategory.objects.filter(deleted_at__isnull=True,user_id=request.user.id)
+            model = ArticleCategory.objects.filter(deleted_at__isnull=True, user_id=request.user.id)
             self.page_size = request.GET.get('page_size', 10)
             result = self.paginate_queryset(model, request)
             return self.get_paginated_response(ArticleCategoryIndexSerializer(result, many=True).data)
@@ -36,7 +36,7 @@ class ArticleCategoryCreate(APIView):
                 result = serializer.save()
                 return Response({
                     'message': messages.CREATED,
-                    'data': ArticleCategoryIndexSerializer(result).data
+                    'data': ArticleCategorySerializer(result).data
                 })
             else:
                 return Response(serializer.errors)
@@ -44,17 +44,15 @@ class ArticleCategoryCreate(APIView):
             return exceptions.default_exception(self, e)
 
 
-
 class ArticleCategoryShow(APIView):
     permission_classes = [IsAuthenticated & ArticleCategoryShowPermission]
 
     def get(self, request, pk):
         try:
-            model = ArticleCategory.objects.select_related('province', 'city').get(pk=pk)
+            model = ArticleCategory.objects.get(pk=pk)
             return Response(ArticleCategorySerializer(model).data)
         except Exception as e:
             return exceptions.default_exception(self, e)
-
 
 
 class ArticleCategoryUpdate(APIView):
@@ -68,13 +66,33 @@ class ArticleCategoryUpdate(APIView):
                 result = serializer.save()
                 return Response({
                     'message': messages.UPDATED,
-                    'data': ArticleCategoryIndexSerializer(result).data
+                    'data': ArticleCategorySerializer(result).data
                 })
             else:
                 return Response(serializer.errors)
         except Exception as e:
             return exceptions.default_exception(self, e)
 
+
+class ArticleCategoryUpdateSort(APIView):
+    permission_classes = [IsAuthenticated & ArticleCategoryIndexPermission]
+
+    def put(self, request):
+        try:
+            serializer = ArticleCategoryUpdateSortSerializer(data=request.data)
+            if serializer.is_valid():
+                sorts = serializer.data.get('sorts')
+                for sort in sorts:
+                    article_category = ArticleCategory.objects.get(id=sort['id'])
+                    article_category.sort = sort['sort']
+                    article_category.save()
+                return Response({
+                    'message': messages.UPDATED,
+                })
+            else:
+                return Response(serializer.errors)
+        except Exception as e:
+            return exceptions.default_exception(self, e)
 
 
 class ArticleCategorySoftDelete(APIView):
@@ -92,7 +110,6 @@ class ArticleCategorySoftDelete(APIView):
             return exceptions.default_exception(self, e)
 
 
-
 class ArticleCategoryForceDelete(APIView):
     permission_classes = [IsAuthenticated & ArticleCategoryForceDeletePermission]
 
@@ -105,7 +122,6 @@ class ArticleCategoryForceDelete(APIView):
             })
         except Exception as e:
             return exceptions.default_exception(self, e)
-
 
 
 class ArticleCategoryRestore(APIView):
@@ -121,4 +137,3 @@ class ArticleCategoryRestore(APIView):
             })
         except Exception as e:
             return exceptions.default_exception(self, e)
-
