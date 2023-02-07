@@ -1,0 +1,39 @@
+name: ci_selloora_main_backend
+
+on:
+  push:
+    tags:
+      - 'release-*'
+
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: update docker compose from latest image
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: ${{ secrets.SSH_PORT }}
+          script_stop: true
+          timeout: "999999s"
+          command_timeout: "999999m"
+          script: |
+            cd /root/docker-stack
+            /root/docker-stack/runner-server.sh up selloora_main_backend
+      - name: send telegram message on push
+        uses: appleboy/telegram-action@master
+        with:
+          to: 5426495351
+          token: 5764924007:AAHSOlyZZWF7NL6_P-jiY2RxLl2-AJsgKGk
+          message: |
+            ${{ github.actor }} created commit:
+            Commit message: ${{ github.event.commits[0].message }}
+            
+            Repository: ${{ github.repository }}
+            
+            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+
+

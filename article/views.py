@@ -1,4 +1,3 @@
-
 from django.utils import timezone
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import IsAuthenticated
@@ -18,8 +17,13 @@ class ArticleIndex(APIView, PageNumberPagination):
 
     def get(self, request):
         try:
-            model = Article.objects.filter(deleted_at__isnull=True,user_id=request.user.id)
+            model = Article.objects.filter(user_id=request.user.id)
             self.page_size = request.GET.get('page_size', 10)
+            is_deleted = bool(request.GET.get('is_deleted', False))
+            if is_deleted:
+                model = model.filter(deleted_at__isnull=True)
+            else:
+                model = model.filter(deleted_at__isnull=False)
             result = self.paginate_queryset(model, request)
             return self.get_paginated_response(ArticleIndexSerializer(result, many=True).data)
         except Exception as e:
@@ -44,7 +48,6 @@ class ArticleCreate(APIView):
             return exceptions.default_exception(self, e)
 
 
-
 class ArticleShow(APIView):
     permission_classes = [IsAuthenticated & ArticleShowPermission]
 
@@ -54,7 +57,6 @@ class ArticleShow(APIView):
             return Response(ArticleSerializer(model).data)
         except Exception as e:
             return exceptions.default_exception(self, e)
-
 
 
 class ArticleUpdate(APIView):
@@ -76,7 +78,6 @@ class ArticleUpdate(APIView):
             return exceptions.default_exception(self, e)
 
 
-
 class ArticleSoftDelete(APIView):
     permission_classes = [IsAuthenticated & ArticleSoftDeletePermission]
 
@@ -90,7 +91,6 @@ class ArticleSoftDelete(APIView):
             })
         except Exception as e:
             return exceptions.default_exception(self, e)
-
 
 
 class ArticleForceDelete(APIView):
@@ -107,7 +107,6 @@ class ArticleForceDelete(APIView):
             return exceptions.default_exception(self, e)
 
 
-
 class ArticleRestore(APIView):
     permission_classes = [IsAuthenticated & ArticleRestorePermission]
 
@@ -121,4 +120,3 @@ class ArticleRestore(APIView):
             })
         except Exception as e:
             return exceptions.default_exception(self, e)
-

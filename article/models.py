@@ -11,7 +11,7 @@ class Article(models.Model):
     id = models.BigAutoField(primary_key=True)
     title = models.CharField(max_length=255)
     body = models.TextField(null=True)
-    deleted_at = models.DateTimeField(null=True)
+    deleted_at = models.DateTimeField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

@@ -16,8 +16,13 @@ class ProvinceIndex(APIView, PageNumberPagination):
 
     def get(self, request):
         try:
-            model = Province.objects.filter(deleted_at__isnull=True,user_id=request.user.id)
+            model = Province.objects.filter(user_id=request.user.id)
             self.page_size = request.GET.get('page_size', 10)
+            is_deleted = bool(request.GET.get('is_deleted', False))
+            if is_deleted:
+                model = model.filter(deleted_at__isnull=True)
+            else:
+                model = model.filter(deleted_at__isnull=False)
             result = self.paginate_queryset(model, request)
             return self.get_paginated_response(ProvinceIndexSerializer(result, many=True).data)
         except Exception as e:

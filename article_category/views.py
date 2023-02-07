@@ -18,8 +18,13 @@ class ArticleCategoryIndex(APIView, PageNumberPagination):
 
     def get(self, request):
         try:
-            model = ArticleCategory.objects.filter(deleted_at__isnull=True, user_id=request.user.id)
+            model = ArticleCategory.objects.filter(user_id=request.user.id)
             self.page_size = request.GET.get('page_size', 10)
+            is_deleted = bool(request.GET.get('is_deleted', False))
+            if is_deleted:
+                model = model.filter(deleted_at__isnull=True)
+            else:
+                model = model.filter(deleted_at__isnull=False)
             result = self.paginate_queryset(model, request)
             return self.get_paginated_response(ArticleCategoryIndexSerializer(result, many=True).data)
         except Exception as e:

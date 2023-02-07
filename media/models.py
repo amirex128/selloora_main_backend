@@ -10,7 +10,7 @@ class Media(models.Model):
     mime_type = models.CharField(max_length=255)
     size = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
-    deleted_at = models.DateTimeField(null=True)
+    deleted_at = models.DateTimeField(blank=True, null=True)
 
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='media')
 
