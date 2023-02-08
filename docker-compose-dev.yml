@@ -3,15 +3,17 @@ version: '3'
 services:
   django:
     container_name: django
-    image: registry.hamyarsale.ir/selloora_main_backend:latest
     volumes:
       - static:/app/media/static
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "8000:8000"
-    networks: [ 'docker-stack_stack' ]
+    networks: [ selloora ]
 volumes:
   static:
     driver: local
 networks:
-  docker-stack_stack:
+  selloora:
     external: true
