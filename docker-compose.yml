@@ -14,4 +14,5 @@ volumes:
     driver: local
 networks:
   docker-stack_stack:
-    external: true
+    external:
+        name: docker-stack_stack
