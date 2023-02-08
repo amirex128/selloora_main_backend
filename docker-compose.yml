@@ -1,16 +1,19 @@
-version: '3.7'
+version: '3'
 
 services:
   django:
+    container_name: django
     volumes:
       - static:/app/media/static
-    env_file:
-      - .env
     build:
       context: .
       dockerfile: Dockerfile
     ports:
       - "8000:8000"
-
+    networks: [ 'docker-stack_stack' ]
 volumes:
   static:
+    driver: local
+networks:
+  docker-stack_stack:
+    external: true

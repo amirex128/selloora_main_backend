@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-!dw7r6%#16v+tr=s5fqapf1d_w3!x@dgi_1!=(($9h2$16(2&m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(os.environ.get('DJANGO_DEBUG', False))
+DEBUG = os.environ.get('DJANGO_DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS').split(' ')
 
@@ -193,11 +193,11 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get('DEFAULT_DB_NAME'),
-        'USER': os.environ.get('DEFAULT_DB_USER'),
-        'PASSWORD': os.environ.get('DEFAULT_DB_PASSWORD'),
-        'HOST': os.environ.get('DEFAULT_DB_HOST'),
-        'PORT': os.environ.get('DEFAULT_DB_PORT'),
+        'NAME': DEBUG and os.environ.get('DEFAULT_DB_NAME') or os.environ.get('DEFAULT_DB_NAME_PRODUCTION'),
+        'USER': DEBUG and os.environ.get('DEFAULT_DB_USER') or os.environ.get('DEFAULT_DB_USER_PRODUCTION'),
+        'PASSWORD': DEBUG and os.environ.get('DEFAULT_DB_PASSWORD') or os.environ.get('DEFAULT_DB_PASSWORD_PRODUCTION'),
+        'HOST': DEBUG and os.environ.get('DEFAULT_DB_HOST') or os.environ.get('DEFAULT_DB_HOST_PRODUCTION'),
+        'PORT': DEBUG and os.environ.get('DEFAULT_DB_PORT') or os.environ.get('DEFAULT_DB_PORT_PRODUCTION'),
     },
     'sqlite': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -269,7 +269,7 @@ LOGGING = {
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.redis.RedisCache',
-        'LOCATION': 'redis://%s' % os.environ.get('REDIS_HOST'),
+        'LOCATION': 'redis://%s' % DEBUG and os.environ.get('REDIS_HOST') or os.environ.get('REDIS_HOST_PRODUCTION'),
     }
 }
 PASSWORD_HASHERS = [
@@ -303,4 +303,5 @@ ELASTIC_APM = {
     'SERVICE_NAME': 'selloora_main_backend',
     'SECRET_TOKEN': '',
     'DEBUG': True,
+    'SERVER_URL': DEBUG and os.environ.get('APM_SERVER_URL') or os.environ.get('APM_SERVER_URL_PRODUCTION'),
 }
