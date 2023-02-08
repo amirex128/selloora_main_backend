@@ -8,10 +8,10 @@ services:
       - static:/app/media/static
     ports:
       - "8000:8000"
-    networks: [ selloora ]
+    networks: [ docker-stack_selloora ]
 volumes:
   static:
     driver: local
 networks:
-  selloora:
+  docker-stack_selloora:
     external: true
