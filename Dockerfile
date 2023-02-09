@@ -16,4 +16,5 @@ RUN pip3 install -r requirements.txt
 COPY . /app
 COPY .env /app/.env
 ENTRYPOINT ["python3"]
-CMD ["manage.py", "runserver", "0.0.0.0:8000"]
+#CMD ["manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["gunicorn", "--bind", ":8000", "--workers", "3", "core.wsgi"]
