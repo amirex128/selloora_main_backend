@@ -5,8 +5,8 @@
 db.sqlite3
 /venv/*
 
-static/*
-./static/*
+static_files/*
+static_files/*
 
 media/static/*
 ./media/static/*
