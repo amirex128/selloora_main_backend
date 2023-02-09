@@ -4,8 +4,7 @@ services:
   django:
     container_name: django
     volumes:
-      - ./static/media/static:/app/media/static
-      - ./static:/app/static
+      - ./:/app
     build:
       context: .
       dockerfile: Dockerfile

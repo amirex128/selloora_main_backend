@@ -5,8 +5,7 @@ services:
     container_name: django
     image: registry.hamyarsale.ir/selloora_main_backend:latest
     volumes:
-      - ./static/media/static:/app/media/static
-      - ./static:/app/static
+      - ./:/app
     ports:
       - "8000:8000"
     networks: [ docker-stack_selloora ]
