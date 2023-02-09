@@ -4,7 +4,7 @@ services:
   django:
     container_name: django
     volumes:
-      - ./static/media/static:/app/media/static
+      - ./media/static:/app/media/static
       - ./static:/app/static
     build:
       context: .
