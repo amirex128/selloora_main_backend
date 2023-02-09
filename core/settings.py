@@ -27,6 +27,7 @@ SECRET_KEY = 'django-insecure-!dw7r6%#16v+tr=s5fqapf1d_w3!x@dgi_1!=(($9h2$16(2&m
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DJANGO_DEBUG', 'True') == 'True'
+MODE = os.environ.get('DJANGO_MODE', 'development')
 
 ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS').split(' ')
 
@@ -68,6 +69,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -193,11 +195,16 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': DEBUG and os.environ.get('DEFAULT_DB_NAME') or os.environ.get('DEFAULT_DB_NAME_PRODUCTION'),
-        'USER': DEBUG and os.environ.get('DEFAULT_DB_USER') or os.environ.get('DEFAULT_DB_USER_PRODUCTION'),
-        'PASSWORD': DEBUG and os.environ.get('DEFAULT_DB_PASSWORD') or os.environ.get('DEFAULT_DB_PASSWORD_PRODUCTION'),
-        'HOST': DEBUG and os.environ.get('DEFAULT_DB_HOST') or os.environ.get('DEFAULT_DB_HOST_PRODUCTION'),
-        'PORT': DEBUG and os.environ.get('DEFAULT_DB_PORT') or os.environ.get('DEFAULT_DB_PORT_PRODUCTION'),
+        'NAME': MODE == 'development' and os.environ.get('DEFAULT_DB_NAME') or os.environ.get(
+            'DEFAULT_DB_NAME_PRODUCTION'),
+        'USER': MODE == 'development' and os.environ.get('DEFAULT_DB_USER') or os.environ.get(
+            'DEFAULT_DB_USER_PRODUCTION'),
+        'PASSWORD': MODE == 'development' and os.environ.get('DEFAULT_DB_PASSWORD') or os.environ.get(
+            'DEFAULT_DB_PASSWORD_PRODUCTION'),
+        'HOST': MODE == 'development' and os.environ.get('DEFAULT_DB_HOST') or os.environ.get(
+            'DEFAULT_DB_HOST_PRODUCTION'),
+        'PORT': MODE == 'development' and os.environ.get('DEFAULT_DB_PORT') or os.environ.get(
+            'DEFAULT_DB_PORT_PRODUCTION'),
     },
     'sqlite': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -269,7 +276,8 @@ LOGGING = {
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.redis.RedisCache',
-        'LOCATION': 'redis://%s' % DEBUG and os.environ.get('REDIS_HOST') or os.environ.get('REDIS_HOST_PRODUCTION'),
+        'LOCATION': 'redis://%s' % MODE == 'development' and os.environ.get('REDIS_HOST') or os.environ.get(
+            'REDIS_HOST_PRODUCTION'),
     }
 }
 PASSWORD_HASHERS = [
@@ -288,13 +296,12 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / "static"
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = 'media/'
-MEDIA_PATH = 'media'
-MEDIA_ROOT = os.path.join(BASE_DIR, MEDIA_PATH)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -305,5 +312,6 @@ ELASTIC_APM = {
     'SERVICE_NAME': 'selloora_main_backend',
     'SECRET_TOKEN': '',
     'DEBUG': True,
-    'SERVER_URL': DEBUG and os.environ.get('APM_SERVER_URL') or os.environ.get('APM_SERVER_URL_PRODUCTION'),
+    'SERVER_URL': MODE == 'development' and os.environ.get('APM_SERVER_URL') or os.environ.get(
+        'APM_SERVER_URL_PRODUCTION'),
 }

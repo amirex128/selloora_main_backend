@@ -12,6 +12,7 @@ services:
     networks: [ docker-stack_selloora ]
     environment:
       - DJANGO_DEBUG=False
+      - DJANGO_MODE=production
 volumes:
   static:
     driver: local

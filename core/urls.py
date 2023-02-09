@@ -54,4 +54,4 @@ urlpatterns += [
                    path('api/v1/shop/', include('shop.urls')),
                    path('api/v1/ticket/', include('ticket.urls')),
                    path('api/v1/user/', include('user.urls')),
-               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+               ]

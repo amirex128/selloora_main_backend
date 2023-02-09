@@ -51,13 +51,13 @@ class MediaCreate(APIView):
                 #       option="-q 80", logging="-v")
                 name = uuid.uuid4().hex + '__' + slugify(os.path.splitext(file.name)[0]) + os.path.splitext(file.name)[
                     1]
-                with open(os.path.join(settings.MEDIA_ROOT, 'static', name), 'wb+') as destination:
+                with open(os.path.join(os.path.join(settings.BASE_DIR, 'media'), 'static', name), 'wb+') as destination:
                     for chunk in file.chunks():
                         destination.write(chunk)
                     destination.close()
-                path = os.path.join(settings.MEDIA_PATH, 'static', name)
+                path = os.path.join('media', 'static', name)
                 full_path = os.path.join(request.is_secure() and "https://" or "http://", request.get_host(),
-                                         settings.MEDIA_PATH, 'static', name)
+                                         'media', 'static', name)
                 mime_type = file.content_type
                 size = file.size / 1024
                 created_at = timezone.now()
