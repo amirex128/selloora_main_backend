@@ -14,7 +14,5 @@ RUN apk add openssl-dev
 RUN pip3 install --upgrade pip
 RUN pip3 install -r requirements.txt
 COPY . /app
-COPY .env /app/.env
 ENTRYPOINT ["python3"]
-
 CMD ["/usr/local/bin/gunicorn", "--bind", ":8000", "--workers", "3", "core.wsgi"]
