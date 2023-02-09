@@ -1,3 +1,12 @@
 .idea/*
+./.idea/*
+./.idea
+
 db.sqlite3
 /venv/*
+
+static/*
+./static/*
+
+media/static/*
+./media/static/*
