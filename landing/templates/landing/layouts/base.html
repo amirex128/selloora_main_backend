@@ -1,0 +1,283 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="">
+    <meta name="description" content="Samu | Saas & Software HTML Template">
+    <meta name="keywords" content="saas, responsive, premium, retina, resume, jquery, css3, bootstrap">
+
+    <!-- Title -->
+    <title>سلورا | دستیار فروش شما</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'landing/assets/images/logo/favicon.png' %}" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'landing/assets/css/bootstrap.min.css' %}">
+    <!-- Fontawesome Icon CSS -->
+    <link rel="stylesheet" href="{% static 'landing/assets/fonts/fontawesome/css/all.min.css' %}">
+    <!-- Magnific Popup CSS -->
+    <link rel="stylesheet" href="{% static 'landing/assets/css/magnific-popup.min.css' %}">
+    <!-- Meanmenu CSS -->
+    <link rel="stylesheet" href="{% static 'landing/assets/css/meanmenu.min.css' %}">
+    <!-- Owl-Carousel CSS -->
+    <link rel="stylesheet" href="{% static 'landing/assets/css/owl.carousel.min.css' %}">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="{% static 'landing/assets/css/style.css' %}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{% static 'landing/assets/css/responsive.css' %}">
+    <!-- RTL CSS -->
+    <link rel="stylesheet" href="{% static 'landing/assets/css/rtl.css' %}">
+
+    <link rel="stylesheet" href="{% static 'landing/assets/css/custom.css' %}">
+</head>
+
+<body>
+
+<!-- Start preloader -->
+<div id="preLoader">
+    <div class="wrapper">
+        <div class="loader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <span class="text">در حال بارگیری...</span>
+    </div>
+</div>
+<!-- End preloader -->
+
+<!-- Start header area -->
+<header id="header" class="header-area header-8">
+    <div class="main-navbar-area sticky-header">
+        <div class="main-responsive-nav">
+            <div class="container">
+                <div class="main-responsive-menu">
+                    <div class="logo">
+                        <a href="index.html">
+                            سلورا
+{#                            <img src="{% static 'landing/assets/images/logo/logo-2.png' %}" alt="لوگو">#}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-nav">
+            <div class="container">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <a class="navbar-brand text-white" href="index.html">
+                        سلورا دستیار فروش شبکه های اجتماعی
+{#                        <img src="{% static 'landing/assets/images/logo/logo-1.png' %}" alt="لوگو">#}
+{#                        <img src="{% static 'landing/assets/images/logo/logo-2.png' %}" alt="لوگو">#}
+                    </a>
+                    <div class="collapse navbar-collapse mean-menu">
+                        <ul class="navbar-nav ms-auto" id="menu">
+                            <li class="nav-item">
+                                <a href="/" class="nav-link toggle active">صفحه اصلی</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/blog" class="nav-link toggle">وبلاگ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/pricing" class="nav-link">تعرفه ها</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/faq" class="nav-link">قوانین</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/contact" class="nav-link">درباره ما</a>
+                            </li>
+                            <li class="cta-btn">
+                                <a href="/panel/login" class="btn secondary-btn">ورود / عضویت</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- End header area -->
+
+{% block content %}{% endblock content %}
+
+<!-- Start Footer Area -->
+<footer id="footer" class="footer-area footer-3">
+    <div class="footer-top pt-120 pb-90">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-12">
+                    <div class="footer-widget">
+                        <h3>شرکت</h3>
+                        <ul class="footer-links">
+                            <li>
+                                <i class="fal fa-angle-left"></i>
+                                <a href="404-error.html">درباره ما</a>
+                            </li>
+                            <li>
+                                <i class="fal fa-angle-left"></i>
+                                <a href="404-error.html">تیم ما</a>
+                            </li>
+                            <li>
+                                <i class="fal fa-angle-left"></i>
+                                <a href="404-error.html">محصولات</a>
+                            </li>
+                            <li>
+                                <i class="fal fa-angle-left"></i>
+                                <a href="contact.html">تماس با ما</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-12">
+                    <div class="footer-widget">
+                        <h3>محصولات</h3>
+                        <ul class="footer-links">
+                            <li>
+                                <i class="fal fa-angle-left"></i>
+                                <a href="404-error.html">ویژگی ها</a>
+                            </li>
+                            <li>
+                                <i class="fal fa-angle-left"></i>
+                                <a href="pricing.html">تعرفه</a>
+                            </li>
+                            <li>
+                                <i class="fal fa-angle-left"></i>
+                                <a href="404-error.html">اعتبارات</a>
+                            </li>
+                            <li>
+                                <i class="fal fa-angle-left"></i>
+                                <a href="blog.html">اخبار</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-12">
+                    <div class="footer-widget">
+                        <h3>دانلود</h3>
+                        <ul class="footer-links">
+                            <li>
+                                <i class="fal fa-angle-left"></i>
+                                <a href="404-error.html">IOS</a>
+                            </li>
+                            <li>
+                                <i class="fal fa-angle-left"></i>
+                                <a href="404-error.html">اندروید</a>
+                            </li>
+                            <li>
+                                <i class="fal fa-angle-left"></i>
+                                <a href="404-error.html">مایکروسافت</a>
+                            </li>
+                            <li>
+                                <i class="fal fa-angle-left"></i>
+                                <a href="404-error.html">دسکتاپ</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-12">
+                    <div class="footer-widget">
+                        <h3>پشتیبانی</h3>
+                        <ul class="footer-links">
+                            <li>
+                                <i class="fal fa-angle-left"></i>
+                                <a href="404-error.html">حریم خصوصی</a>
+                            </li>
+                            <li>
+                                <i class="fal fa-angle-left"></i>
+                                <a href="faq.html">راهنما</a>
+                            </li>
+                            <li>
+                                <i class="fal fa-angle-left"></i>
+                                <a href="404-error.html">قوانین</a>
+                            </li>
+                            <li>
+                                <i class="fal fa-angle-left"></i>
+                                <a href="faq.html">سوالات متداول</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12 justify-self-end">
+                    <div class="footer-widget">
+                        <div class="social-link">
+                            <h3>درباره فروشگاه ساز سلورا</h3>
+                            <p>
+                                سلورا یک دستیار ساده و کارآمد برای مدیریت فروش شما در شبکه های اجتماعی است که فرآیند های ثبت سفارش و پرداخت تا تحویل سفارش رو برای شما انجام میدهد
+                            </p>
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.google.com/" target="_blank"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-xxl-6 col-xl-6 col-md-6">
+                    <div class="navbar-brand">
+                        <a href="index.html">
+                            <img src="{% static 'landing/assets/images/logo/logo-2.png' %}" alt="لوگو"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xxl-6 col-xl-6 col-md-6">
+                    <ul class="nav-links list-unstyled text-md-start">
+                        <li class="nav-item">
+                            <a href="/faq">شرایط استفاده</a>
+                        </li>
+                        <li>
+                            <a href="/help">راهنمای کار با سامانه سلورا</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer Area -->
+
+<!-- Start Go to Top -->
+<div class="go-top"><i class="fal fa-angle-up"></i></div>
+<!-- End Go to Top -->
+
+<!-- Jquery JS -->
+<script src="{% static 'landing/assets/js/jquery.min.js' %}"></script>
+<!-- Popper JS -->
+<script src="{% static 'landing/assets/js/popper.min.js' %}"></script>
+<!-- Bootstrap JS -->
+<script src="{% static 'landing/assets/js/bootstrap.min.js' %}"></script>
+<!-- Waypoint JS -->
+<script src="{% static 'landing/assets/js/jquery.waypoints.js' %}"></script>
+<!-- Magnific Popup JS -->
+<script src="{% static 'landing/assets/js/jquery.magnific-popup.min.js' %}"></script>
+<!-- CounterUp JS -->
+<script src="{% static 'landing/assets/js/jquery.counterup.min.js' %}"></script>
+<!-- Meanmenu JS -->
+<script src="{% static 'landing/assets/js/jquery.meanmenu.min.js' %}"></script>
+<!-- Owl-Carousel JS -->
+<script src="{% static 'landing/assets/js/owl.carousel.min.js' %}"></script>
+<!-- Lazysizes -->
+<script src="{% static 'landing/assets/js/lazysizes.min.js' %}"></script>
+<!-- RTL Script JS -->
+<script src="{% static 'landing/assets/js/rtl-script.js' %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'iransansxv';
+    src: url('../fonts/IRANSansXV.woff2') format('woff-variations'),
+        /* will be the standard and works in Safari now */ url('../fonts/IRANSansXV.woff2') format('woff');
+    /* for the other supporting browsers */
+    font-weight: 100 900;
+    font-display: fallback;
+}
+
+* {
+    font-family: 'iransansxv', 'yekan', serif;
+}

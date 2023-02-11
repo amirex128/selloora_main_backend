@@ -1,12 +1,15 @@
-mig:
+m:
 	python manage.py migrate
 
-makemig:
+mm:
 	python manage.py makemigrations
 
-suser:
+cs:
+	python manage.py collectstatic --noinput --clear
+
+su:
 	python manage.py createsuperuser
 
-runserver:
+rs:
 	python manage.py runserver
 

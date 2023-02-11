@@ -26,8 +26,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-!dw7r6%#16v+tr=s5fqapf1d_w3!x@dgi_1!=(($9h2$16(2&m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DJANGO_DEBUG', 'True') == 'True'
-MODE = os.environ.get('DJANGO_MODE', 'development')
+DEBUG = os.environ.get('DJANGO_DEBUG', 'True').strip() == 'True'
+MODE = os.environ.get('DJANGO_MODE', 'development').strip()
 
 ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS').split(' ')
 
@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     "debug_toolbar",
+    'ckeditor',
 
     'address',
     'article',
@@ -55,6 +56,7 @@ INSTALLED_APPS = [
     'city',
     'discount',
     'domain',
+    'landing',
     'media',
     'order',
     'product',
@@ -83,6 +85,7 @@ MIDDLEWARE = [
 INTERNAL_IPS = [
     "127.0.0.1",
     "localhost",
+    '130.185.73.110',
 ]
 DEBUG_TOOLBAR_PANELS = [
     'debug_toolbar.panels.history.HistoryPanel',
@@ -195,15 +198,15 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': MODE == 'development' and os.environ.get('DEFAULT_DB_NAME') or os.environ.get(
+        'NAME': os.environ.get('DEFAULT_DB_NAME') if MODE == 'development' else os.environ.get(
             'DEFAULT_DB_NAME_PRODUCTION'),
-        'USER': MODE == 'development' and os.environ.get('DEFAULT_DB_USER') or os.environ.get(
+        'USER': os.environ.get('DEFAULT_DB_USER') if MODE == 'development' else os.environ.get(
             'DEFAULT_DB_USER_PRODUCTION'),
-        'PASSWORD': MODE == 'development' and os.environ.get('DEFAULT_DB_PASSWORD') or os.environ.get(
+        'PASSWORD': os.environ.get('DEFAULT_DB_PASSWORD') if MODE == 'development' else os.environ.get(
             'DEFAULT_DB_PASSWORD_PRODUCTION'),
-        'HOST': MODE == 'development' and os.environ.get('DEFAULT_DB_HOST') or os.environ.get(
+        'HOST': os.environ.get('DEFAULT_DB_HOST') if MODE == 'development' else os.environ.get(
             'DEFAULT_DB_HOST_PRODUCTION'),
-        'PORT': MODE == 'development' and os.environ.get('DEFAULT_DB_PORT') or os.environ.get(
+        'PORT': os.environ.get('DEFAULT_DB_PORT') if MODE == 'development' else os.environ.get(
             'DEFAULT_DB_PORT_PRODUCTION'),
     },
     'sqlite': {
@@ -276,16 +279,27 @@ LOGGING = {
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.redis.RedisCache',
-        'LOCATION': 'redis://%s' % MODE == 'development' and os.environ.get('REDIS_HOST') or os.environ.get(
-            'REDIS_HOST_PRODUCTION'),
+        'LOCATION': 'redis://%s' % os.environ.get('REDIS_HOST').strip() if MODE == 'development' else os.environ.get(
+            'REDIS_HOST_PRODUCTION').strip(),
     }
 }
 PASSWORD_HASHERS = [
     'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
 ]
-# Internationalization
-# https://docs.djangoproject.com/en/4.1/topics/i18n/
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+CKEDITOR_IMAGE_BACKEND = "pillow"
+CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
 
+CKEDITOR_CONFIGS = {
+    'default':
+        {
+            'toolbar': 'full',
+            'width': 'auto',
+            'extraPlugins': ','.join([
+                'codesnippet',
+            ]),
+        },
+}
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'Asia/Tehran'
@@ -313,6 +327,6 @@ ELASTIC_APM = {
     'SERVICE_NAME': 'selloora_main_backend',
     'SECRET_TOKEN': '',
     'DEBUG': True,
-    'SERVER_URL': MODE == 'development' and os.environ.get('APM_SERVER_URL') or os.environ.get(
+    'SERVER_URL': os.environ.get('APM_SERVER_URL').strip() if MODE == 'development' else os.environ.get(
         'APM_SERVER_URL_PRODUCTION'),
 }

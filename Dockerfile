@@ -3,14 +3,11 @@ EXPOSE 8000
 WORKDIR /app
 COPY requirements.txt /app
 RUN apk update
-RUN apk add gcc
-RUN apk add musl-dev
-RUN apk add build-base
-RUN apk add python3-dev
-RUN apk add mariadb-dev
-RUN apk add mysql-client
-RUN apk add libstdc++
-RUN apk add openssl-dev
+RUN apk bash meson py3-pip sudo python3 gcc build-base musl-dev add py3-setuptools python3-tkinter tiff-dev jpeg-dev openjpeg-dev zlib-dev freetype-dev lcms2-dev \
+    libwebp-dev tcl-dev tk-dev harfbuzz-dev fribidi-dev libimagequant-dev \
+    libxcb-dev libpng-dev openssl  openssl-dev libstdc++ mysql-client mariadb-dev python3-dev \
+
+
 RUN pip3 install --upgrade pip
 RUN pip3 install -r requirements.txt
 COPY . /app

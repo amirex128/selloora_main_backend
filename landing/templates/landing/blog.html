@@ -1,0 +1,248 @@
+{% extends 'landing/layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <!-- Start Page Title area-->
+    <div class="page-title-area">
+        <div class="container">
+            <div class="content text-center">
+                <h1>وبلاگ های اخیر</h1>
+                <ul class="list-unstyled">
+                    <li class="d-inline"><a href="index.html">صفحه اصلی</a></li>
+                    <li class="d-inline">/</li>
+                    <li class="d-inline active">وبلاگ</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Title area -->
+
+    <!-- Start Blog Area -->
+    <div class="blog-area blog-with-sidebar pt-120 pb-90">
+        <div class="container">
+            <div class="row justify-content-center gx-xl-5">
+                <div class="col-lg-8">
+                    <article class="item-single mb-30">
+                        <div class="image">
+                            <a href="blog-details.html" class="lazy-container aspect-ratio">
+                                <img class="lazyload lazy-image" src="{% static 'landing/assets/images/placeholder.png' %}"
+                                     data-src="{% static 'landing/assets/images/blog/blog-4.jpg' %}" alt="تصویر وبلاگ">
+                            </a>
+                            <a href="404-error.html" class="btn primary-btn primary-btn-2"><i
+                                    class="fas fa-share-alt"></i>اشتراک گذاری</a>
+                        </div>
+                        <div class="content">
+                            <ul class="info-list">
+                                <li><i class="far fa-calendar-alt"></i>8 مهر 1401</li>
+                                <li><i class="fas fa-user"></i>ادمین</li>
+                                <li><i class="fas fa-tag"></i>آژانس طراحی</li>
+                            </ul>
+                            <h3 class="title">
+                                <a href="blog-details.html">
+                                    بهترین راه برای ایجاد یک گفتگوی موفقیت آمیز
+                                </a>
+                            </h3>
+                            <p>
+                                آیا در برقراری ارتباط موثر کلامی یا نوشتاری با دیگران خیلی تلاش می‌کنید؟ کلمات به راحتی
+                                بر زبانتان جاری می‌َشوند اما نتایج واقعی که از آن کلمات حاصل می‌شود با قصد و نیت شما
+                                فاصله دارد؟ شاید با به کارگیری چند تکنیک موثر مشکلتان حل شود.
+                            </p>
+                            <a href="blog-details.html" class="btn primary-btn primary-btn-5">ادامه مطلب</a>
+                        </div>
+                    </article>
+                    <article class="item-single mb-30">
+                        <div class="image">
+                            <a href="blog-details.html" class="lazy-container aspect-ratio">
+                                <img class="lazyload lazy-image" src="{% static 'landing/assets/images/placeholder.png' %}"
+                                     data-src="{% static 'landing/assets/images/blog/blog-5.jpg' %}" alt="تصویر وبلاگ">
+                            </a>
+                            <a href="404-error.html" class="btn primary-btn primary-btn-2"><i
+                                    class="fas fa-share-alt"></i>اشتراک گذاری</a>
+                        </div>
+                        <div class="content">
+                            <ul class="info-list">
+                                <li><i class="far fa-calendar-alt"></i>18 آبان 1401</li>
+                                <li><i class="fas fa-user"></i>مهیار حقی</li>
+                                <li><i class="fas fa-tag"></i>آژانس بازاریابی</li>
+                            </ul>
+                            <h3 class="title">
+                                <a href="blog-details.html">
+                                    تکنولوژی‌های جدید چه تغییراتی در زندگی ما ایجاد کرده‌اند؟
+                                </a>
+                            </h3>
+                            <p>
+                                زندگی بشر از نخستین روز پیدایش با تغییر و تحولاتی روبه‌رو بوده است. انسان همواره با
+                                اختراع و توسعه‌ی تکنولوژی‌های مختلف تلاش کرده است تا زندگی‌اش را به بهترین شکل تغییر
+                                دهد. اما تکنولوژی‌ها چگونه می‌توانند در زندگی انسان تغییرات ایجاد کنند؟
+                            </p>
+                            <a href="blog-details.html" class="btn primary-btn primary-btn-5">ادامه مطلب</a>
+                        </div>
+                    </article>
+                    <article class="item-single mb-30">
+                        <div class="image">
+                            <a href="blog-details.html" class="lazy-container aspect-ratio">
+                                <img class="lazyload lazy-image" src="{% static 'landing/assets/images/placeholder.png' %}"
+                                     data-src="{% static 'landing/assets/images/blog/blog-3.jpg' %}" alt="تصویر وبلاگ">
+                            </a>
+                            <a href="404-error.html" class="btn primary-btn primary-btn-2"><i
+                                    class="fas fa-share-alt"></i>اشتراک گذاری</a>
+                        </div>
+                        <div class="content">
+                            <ul class="info-list">
+                                <li><i class="far fa-calendar-alt"></i>12 آبان 1401</li>
+                                <li><i class="fas fa-user"></i>آرزو حسینی</li>
+                                <li><i class="fas fa-tag"></i>آژانس طراحی</li>
+                            </ul>
+                            <h3 class="title">
+                                <a href="blog-details.html">
+                                    ۱۲ راه برای کاهش استرس در محیط کار
+                                </a>
+                            </h3>
+                            <p>یک متخصص کسب‌وکار به طور میانگین بین ۳۰ تا ۱۰۰ پروژه در دست دارد. در هر ساعت ۷ بار در کار
+                                کارمندان مدرن، وقفه اتفاق می‌افتد و روزی ۲.۱ ساعت حواس‌شان پرت می‌شود. از هر ۱۰ نفر، ۴
+                                نفر در شرکت‌های بزرگی کار می‌کنند که یک بازسازی شرکتی عظیم را تجربه خواهند کرد و به همین
+                                دلیل نگران آینده‌شان هستند. </p>
+                            <a href="blog-details.html" class="btn primary-btn primary-btn-5">ادامه مطلب</a>
+                        </div>
+                    </article>
+                    <div class="pagination mb-30">
+                        <a href="#" class="page-numbers"><i class="fas fa-angle-right"></i></a>
+                        <span class="page-numbers current" aria-current="page">1</span>
+                        <a href="#" class="page-numbers">2</a>
+                        <a href="#" class="page-numbers"><i class="fas fa-angle-left"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <aside class="sidebar-widget-area">
+                        <div class="widget widget-search mb-30">
+                            <h3 class="title">جستجوی پست ها</h3>
+                            <form class="search-form">
+                                <input type="search" class="search-input" placeholder="دنبال چی میگردی ... ؟!">
+                                <button class="btn-search" type="submit">
+                                    <i class="far fa-search"></i>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="widget widget-social-link mb-30">
+                            <h3 class="title">ما رو دنبال کنید</h3>
+                            <ul class="list-unstyled m-0">
+                                <li class="d-inline">
+                                    <a href="https://www.facebook.com/" target="_blank" class="facebook"><i
+                                            class="fab fa-facebook-square"></i></a>
+                                </li>
+                                <li class="d-inline ms-1">
+                                    <a href="https://www.twitter.com/" target="_blank" class="twitter"><i
+                                            class="fab fa-twitter-square"></i></a>
+                                </li>
+                                <li class="d-inline ms-1">
+                                    <a href="https://www.google.com/" target="_blank" class="google"><i
+                                            class="fab fa-google-plus-square"></i></a>
+                                </li>
+                                <li class="d-inline ms-1">
+                                    <a href="https://www.linkedin.com/" target="_blank" class="linkedin"><i
+                                            class="fab fa-linkedin"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="widget widget-post mb-30">
+                            <h3 class="title">پستهای اخیر</h3>
+                            <article class="article-item mb-30">
+                                <div class="image">
+                                    <a href="blog-details.html" class="lazy-container aspect-ratio">
+                                        <img class="lazyload lazy-image" src="{% static 'landing/assets/images/placeholder.png' %}"
+                                             data-src="{% static 'landing/assets/images/blog/blog-1.jpg' %}" alt="تصویر وبلاگ">
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <h6>
+                                        <a href="blog-details.html">چطور زندگی رو آسان کنیم (لذت بردن از زندگی)</a>
+                                    </h6>
+                                    <div class="time">
+                                        2 روز قبل
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="article-item mb-30">
+                                <div class="image">
+                                    <a href="blog-details.html" class="lazy-container aspect-ratio">
+                                        <img class="lazyload lazy-image" src="{% static 'landing/assets/images/placeholder.png' %}"
+                                             data-src="{% static 'landing/assets/images/blog/blog-2.jpg' %}" alt="تصویر وبلاگ">
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <h6>
+                                        <a href="blog-details.html">10 قانون برتر موفقیت در زندگی</a>
+                                    </h6>
+                                    <div class="time">
+                                        3 روز قبل
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="article-item">
+                                <div class="image">
+                                    <a href="blog-details.html" class="lazy-container aspect-ratio">
+                                        <img class="lazyload lazy-image" src="{% static 'landing/assets/images/placeholder.png' %}"
+                                             data-src="{% static 'landing/assets/images/blog/blog-6.jpg' %}" alt="تصویر وبلاگ">
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <h6>
+                                        <a href="blog-details.html">10 نکته مهم در مورد خدمات و طراحی فناوری اطلاعات</a>
+                                    </h6>
+                                    <div class="time">
+                                        2 روز قبل
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="widget widget-categories mb-30">
+                            <h3 class="title">دسته بندی ها</h3>
+                            <ul class="list-unstyled m-0">
+                                <li class="d-flex align-items-center justify-content-between">
+                                    <a href="blog.html"><i class="fal fa-folder"></i>فناوری</a>
+                                    <span class="tqy">(11)</span>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-between">
+                                    <a href="blog.html"><i class="fal fa-folder"></i>کسب و کار</a>
+                                    <span class="tqy">(02)</span>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-between">
+                                    <a href="blog.html"><i class="fal fa-folder"></i>اندروید</a>
+                                    <span class="tqy">(45)</span>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-between">
+                                    <a href="blog.html"><i class="fal fa-folder"></i>IOS</a>
+                                    <span class="tqy">(26)</span>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-between">
+                                    <a href="blog.html"><i class="fal fa-folder"></i>دیدنی ها</a>
+                                    <span class="tqy">(45)</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="widget widget-tag mb-30">
+                            <h3 class="title">برچسب ها</h3>
+                            <ul class="list-unstyled m-0">
+                                <li class="d-inline-block"><a href="#">فناوری</a></li>
+                                <li class="d-inline-block"><a href="#">کسب و کار</a></li>
+                                <li class="d-inline-block"><a href="#">اپلیکیشن</a></li>
+                                <li class="d-inline-block"><a href="#">بازار یابی</a></li>
+                                <li class="d-inline-block"><a href="#">اجتماعی </a></li>
+                                <li class="d-inline-block"><a href="#">سیاسی</a></li>
+                            </ul>
+                        </div>
+                        <div class="widget widget-adds mb-30">
+                            <div class="content text-center">
+                                <h3>میتونی این قالب رو با 20٪ تخفیف بگیری !!</h3>
+                                <a href="404-error.html" class="btn secondary-btn text-uppercase">بزن بریم !</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Blog Area -->
+
+{% endblock content %}
