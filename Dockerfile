@@ -3,7 +3,6 @@ EXPOSE 8000
 WORKDIR /app
 COPY requirements.txt /app
 RUN apk update
-RUN apk sudo
 RUN apk gcc
 RUN apk build-base
 RUN apk musl-dev
