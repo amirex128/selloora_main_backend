@@ -3,10 +3,32 @@ EXPOSE 8000
 WORKDIR /app
 COPY requirements.txt /app
 RUN apk update
-RUN apk meson sudo gcc build-base musl-dev add py3-setuptools python3-tkinter tiff-dev jpeg-dev openjpeg-dev zlib-dev freetype-dev lcms2-dev libwebp-dev tcl-dev tk-dev harfbuzz-dev fribidi-dev libimagequant-dev libxcb-dev libpng-dev openssl openssl-dev libstdc++ mysql-client mariadb-dev python3-dev
-
-
-
+RUN apk meson
+RUN apk sudo
+RUN apk gcc
+RUN apk build-base
+RUN apk musl-dev
+RUN apk python3-tkinter
+RUN apk tiff-dev
+RUN apk jpeg-dev
+RUN apk openjpeg-dev
+RUN apk zlib-dev
+RUN apk freetype-dev
+RUN apk lcms2-dev
+RUN apk libwebp-dev
+RUN apk tcl-dev
+RUN apk tk-dev
+RUN apk harfbuzz-dev
+RUN apk fribidi-dev
+RUN apk libimagequant-dev
+RUN apk libxcb-dev
+RUN apk libpng-dev
+RUN apk openssl
+RUN apk openssl-dev
+RUN apk libstdc++
+RUN apk mysql-client
+RUN apk mariadb-dev
+RUN apk python3-dev
 RUN pip3 install --upgrade pip
 RUN pip3 install -r requirements.txt
 COPY . /app
